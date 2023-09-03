@@ -22,25 +22,24 @@ const Div = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 100%;
-  max-width: 1240px;
   width: 100vw;
+  max-width: 1240;
   margin: 0 auto;
   height: 680px;
-  color: #000;
-  @media (max-width: 600px) {
+  color: var(--dark);
+  @media (max-width: 710px) {
     flex-direction: column-reverse;
     height: fit-content;
-    padding: 42px;
+    padding: 2.625rem;
   }
 `;
 
 const Img = styled.img`
-  border-radius: 8px;
-  margin-left: 42px;
+  border-radius: 0.625rem;
   min-width: 340px;
-  max-width: 540px;
-  width: 80vw;
+  max-width: 440px;
+  width: 40%;
+  padding: 0.75rem;
   height: auto;
 
   @media (max-width: 600px) {

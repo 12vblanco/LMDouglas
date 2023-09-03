@@ -1,46 +1,64 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo2 from "../../assets/logo.png";
 import logo from "../../assets/logoSolo.png";
+import Burger from "./Burger";
 import Logo from "./Logo";
 import { Nav } from "./Nav";
 import Social from "./Social";
 
-const Navbar = ({}) => {
-  const [isMobile, setIsMobile] = useState(false);
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const navItems = [
+    { label: "Home", link: "/" },
+    { label: "Contact", link: "Home#contact" },
+  ];
 
   useEffect(() => {
-    setIsMobile(window.screen.width < 600);
+    const checkMobile = () => setIsMobile(window.innerWidth < 800);
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
+
   return (
     <ContainerNav>
       {!isMobile ? (
-        <DivNav>
-          <Div>
-            <Logo>{logo}</Logo>
-          </Div>
-          <Column>
-            <Name>L.M. Douglas</Name>
-            <Div>
-              <Nav />
-            </Div>
-          </Column>
-          <Div>
-            <Social />
-          </Div>
-        </DivNav>
-      ) : (
-        <DivNav>
-          <Column>
-            <Logo>{logo2}</Logo>
-            <Div>
-              <Nav />
-            </Div>
+        <>
+          <Link to="/">
+            <LogoDiv>
+              <Logo>{logo}</Logo>
+              <Name>L.M. Douglas</Name>
+            </LogoDiv>
+          </Link>
+          <DivNav>
+            <Column>
+              <Div>
+                <Nav />
+              </Div>
+            </Column>
             <Div>
               <Social />
             </Div>
-          </Column>
-        </DivNav>
+          </DivNav>
+        </>
+      ) : (
+        <DivBurger>
+          <Logo>{logo2}</Logo>
+          <Burger
+            handleToggle={handleToggle}
+            isOpen={isOpen}
+            navItems={navItems}
+          />
+        </DivBurger>
       )}
     </ContainerNav>
   );
@@ -48,48 +66,67 @@ const Navbar = ({}) => {
 
 const ContainerNav = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0.625rem;
+  max-width: 1240px;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  @media (max-width: 400px) {
+    padding: 0.125rem 0 1.125rem 0;
+  }
 `;
 
-const DivNav = styled.div`
-  width: 100%;
-  height: 200px;
-  max-width: 1240px;
-  width: 100vw;
+const LogoDiv = styled.div`
   display: flex;
-  margin-top: 14px;
-  justify-content: space-evenly;
+  flex-direction: row;
+  width: 100%;
+  min-width: 380px;
+  height: fit-content;
+  justify-content: center;
   align-items: center;
-
-  @media (max-width: 600px) {
-    margin-top: 2px;
-  }
+  padding: 0.75rem;
+  cursor: pointer;
 `;
 
 const Name = styled.div`
   font-family: "IM Fell Double Pica";
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
+  font-size: 2.375rem;
   width: 100%;
-  height: fit-content;
-  justify-content: center;
+  height: auto;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 46px;
-  margin-top: 12px;
-  margin-bottom: 40px;
-  text-align: center;
+  padding-left: 1.375rem;
+  @media (max-width: 940px) {
+    font-size: 2rem;
+  }
 `;
+
+const DivNav = styled.div`
+  width: 100%;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+`;
+
+const DivBurger = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1.25rem;
+  width: 100%;
+`;
+
 const Div = styled.div`
   display: flex;
-  flex-direction: row;
-  width: 100%;
   height: fit-content;
   justify-content: center;
   align-items: center;

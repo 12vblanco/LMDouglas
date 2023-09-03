@@ -50,13 +50,13 @@ const Tag = styled.div``;
 
 const HeroSection = styled.div`
   position: relative;
-  height: calc(100vh - 262px);
-  margin-top: 180px;
+  height: calc(100vh - 122px);
+  margin-top: 7.125rem;
   max-width: 100vw;
 
   @media (max-width: 600px) {
     height: fit-content;
-    padding: 22px 12px;
+    padding: 1.375rem 0.75rem;
   }
 `;
 
@@ -80,7 +80,8 @@ const Overlay = styled.div`
   width: 100%;
   max-width: 100vw;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--dark);
+  opacity: 0.45;
   z-index: 0;
   @media (max-width: 600px) {
     width: 100vw;
@@ -97,7 +98,7 @@ const Content = styled.div`
   height: 100%;
   position: relative;
   z-index: 1;
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
@@ -125,33 +126,46 @@ const BookImg = styled.img`
   max-width: 100%;
   height: auto;
   min-width: 320px;
-  margin: 6px;
+  margin: 0.5rem;
 `;
 
 const TextContainer = styled.div`
   color: white;
-  width: 55%;
-  max-width: 550px;
-  @media (max-width: 600px) {
+  width: 53%;
+  max-width: 560px;
+  @media (max-width: 960px) {
     width: 98%;
+    margin-left: 1.5rem;
+  }
+  @media (max-width: 800px) {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
   }
 `;
 
 const Title = styled.h1`
-  font-size: 42px;
+  font-size: 2.625rem;
   margin: 0;
 `;
 
 const Subtitle = styled.h2`
-  font-size: 32px;
-  margin: 0 0 10px;
+  font-size: 1.875rem;
+  margin: 0 0 0.625rem;
 `;
 
 const Description = styled.p`
-  font-size: 22px;
+  font-size: 1.375rem;
   line-height: 1.5;
   max-width: 500px;
   margin: 0;
+  @media (max-width: 800px) {
+    max-width: 100%;
+    margin: 0 0 1rem 0;
+  }
 `;
 
 const Overlay2 = styled.div`
@@ -160,7 +174,8 @@ const Overlay2 = styled.div`
   left: 0;
   width: 100vw;
   height: 100%;
-  background: rgba(66, 9, 1, 0.94);
+  background: var(--dark);
+  opacity: 0.96;
   z-index: 1;
   @media (max-width: 600px) {
     width: 100vw;
@@ -175,14 +190,15 @@ const DivHero = styled.div`
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 70px;
+  height: 4.375rem;
   color: white;
 `;
 
 const DivHeroText = styled.p`
-  font-size: 22px;
-  z-index: 123;
+  font-size: 1.375rem;
+  z-index: 12;
   font-style: italic;
+  color: var(--white);
 `;
 
 export default Hero;

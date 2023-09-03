@@ -30,10 +30,10 @@ const FormDiv = styled.form`
   display: flex;
   flex-direction: column;
   color: white;
-  margin-bottom: 22px;
+  margin-bottom: 1.375rem;
   width: 240px;
   input {
-    height: 34px;
+    height: 2.125rem;
   }
 `;
 
