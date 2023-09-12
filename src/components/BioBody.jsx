@@ -11,12 +11,12 @@ const BioBody = () => {
         <Img src={lor1} />
         <Biography>{texts[0].biography}</Biography>
       </BioDiv>
-      <OverlayDiv>
-        <Overlay2 />
-        <DivHero>
-          <DivHeroText>"somethign something somthing"</DivHeroText>
-        </DivHero>{" "}
-      </OverlayDiv>
+      {/* <OverlayDiv> */}
+      {/* <Overlay2 /> */}
+      {/* <DivHero> */}
+      {/* <DivHeroText>"somethign something somthing"</DivHeroText> */}
+      {/* </DivHero>{" "}
+      </OverlayDiv> */}
     </>
   );
 };
@@ -61,17 +61,17 @@ const Biography = styled.p`
   }
 `;
 
-const Overlay2 = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  background: var(--bordeaux);
-  opacity: 0.92;
-  z-index: 1;
-  max-width: 100vw;
-`;
+// const Overlay2 = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100%;
+//   background: var(--dark);
+//   opacity: 0.92;
+//   z-index: 1;
+//   max-width: 100vw;
+// `;
 
 const DivHero = styled.div`
   display: flex;

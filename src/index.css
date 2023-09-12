@@ -46,12 +46,21 @@ body {
 
 h1 {
   font-family: "IM Fell Double Pica SC", serif;
-  font-size: 3.2em;
+  font-size: 1.8rem;
   line-height: 1.1;
 }
 
-h2,
-h3,
-h4 {
+h2 {
+  font-size: 1.3rem;
   font-family: "IM Fell Double Pica SC", serif;
+}
+
+p {
+  font-size: 1.18rem;
+}
+
+.ml-embedded {
+  height: 80px;
+  overflow: hidden;
+  color: white;
 }

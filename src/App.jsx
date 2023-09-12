@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navigation/Navbar";
 import Bio from "./components/pages/Bio";
 import Home from "./components/pages/Home";
+import Terms from "./components/terms/Terms";
 
 function App() {
   return (
@@ -22,7 +23,7 @@ function App() {
         <Route path="/home#contact" element={<Home />} />
         <Route path="/bio" element={<Bio />} />
         {/* Uncomment and add components when they're ready */}
-        {/* <Route path="/terms" element={<Terms />} /> */}
+        <Route path="/terms" element={<Terms />} />
         {/* <Route path="/success" element={<Success />} /> */}
       </Routes>
       <Footer />

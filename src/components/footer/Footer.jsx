@@ -1,5 +1,6 @@
 import { FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import footerBg from "../../assets/imgs/footer-bg.jpg";
 import logo2 from "../../assets/logo2.png";
@@ -16,7 +17,7 @@ const Footer = () => {
               <Logo src={logo2} alt="L.M. Douglas Logo" />
             </LogoDiv>
             <Name>L.M. Douglas</Name>
-            <SubName>'The Endless War Chronicles'</SubName>
+            <SubName>'Chronicles of the Endless war'</SubName>
           </NameDiv>
           <NewsDiv>
             <Newsletter />
@@ -44,7 +45,16 @@ const Footer = () => {
             </SocialDiv>
           </NewsDiv>
         </Div>
-        <H4>Website Victor Blanco - {new Date().getFullYear()} &copy;</H4>
+        <CopyDiv>
+          {" "}
+          <a href="www.victorblancoweb.com" target="_blank">
+            {" "}
+            <H4>Website Victor Blanco - {new Date().getFullYear()} &copy;</H4>
+          </a>
+          <Link to="/terms">
+            <Terms>Terms & Conditions</Terms>
+          </Link>{" "}
+        </CopyDiv>
       </ContentLayer>
     </Container>
   );
@@ -82,7 +92,7 @@ const ContentLayer = styled.div`
 
 const Div = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   height: 300px;
   width: 100%;
@@ -95,7 +105,7 @@ const NameDiv = styled.div`
   height: fit-content;
   justify-content: center;
   align-items: center;
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: white;
 `;
 
@@ -141,17 +151,33 @@ const Icon = styled.div`
   }
 `;
 
+const CopyDiv = styled.div`
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  display: flex;
+  max-width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 8px;
+`;
+
 const H4 = styled.div`
   display: flex;
   justify-content: center;
-  background: var(--dark);
-  padding: 0.75rem 0;
-  color: white;
-  height: fit-content;
-  background: transparent;
-  margin-bottom: -20px;
-  width: 100%;
+  align-items: flex-end;
+  font-size: 13px;
+  color: var(--white);
+
+  a {
+    color: white;
+  }
+`;
+const Terms = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 14px;
+  margin-left: 4px;
+  color: var(--gold);
 `;
 
 export default Footer;
