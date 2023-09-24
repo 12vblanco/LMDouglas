@@ -49,6 +49,7 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   /* font-size: 2rem; */
   margin: 0;
+  color: var(--gold);
 `;
 
 const Subtitle = styled.h2`
