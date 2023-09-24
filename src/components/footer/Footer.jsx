@@ -2,6 +2,7 @@ import { FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import emailImg from "../../assets/imgs/email_img.png";
 import footerBg from "../../assets/imgs/footer-bg.jpg";
 import logo2 from "../../assets/logo2.png";
 
@@ -25,12 +26,7 @@ const Footer = () => {
               .replace(/AT/,'&#64;')
               .replace(/DOT/,'&#46;')"
             >
-              <Img
-                // className="email-img"
-                src="src/assets/imgs/email_img.png"
-                alt="info.lmdouglas@gmail.com"
-                // alt="info dot lmdouglas at gmail dot com"
-              />
+              <Img src={emailImg} alt="info dot lmdouglas at gmail dot com" />
             </a>
           </NameDiv>
           <SocialDiv>
