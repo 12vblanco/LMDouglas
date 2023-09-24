@@ -13,10 +13,6 @@ const Burger = ({ handleToggle, isOpen }) => {
     handleToggle();
     window.location.href = "/bio";
   };
-  const handleTermsClick = () => {
-    handleToggle();
-    window.location.href = "/terms";
-  };
 
   useEffect(() => {
     if (isOpen) {
@@ -30,11 +26,6 @@ const Burger = ({ handleToggle, isOpen }) => {
     };
   }, [isOpen]);
 
-  // const navItems = [
-  //   { label: "Home", link: "/" },
-  //   { label: "Contact", link: "/contact", isCTA: true },
-  // ];
-
   return (
     <>
       <BurgerIcon className={isOpen ? "open" : "closed"} onClick={handleToggle}>
@@ -46,7 +37,6 @@ const Burger = ({ handleToggle, isOpen }) => {
         <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
           <MenuItem onClick={handleBioClick}>Bio</MenuItem>
-          <MenuItem onClick={handleTermsClick}>Terms</MenuItem>
           <Div>
             <Icon>
               <a
