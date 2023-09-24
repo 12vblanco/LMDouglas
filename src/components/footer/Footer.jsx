@@ -199,7 +199,7 @@ const Terms = styled.div`
 `;
 
 const Img = styled.img`
-  max-width: 13.625rem;
+  max-width: 13.63rem;
   margin-top: 0.4rem;
 `;
 
