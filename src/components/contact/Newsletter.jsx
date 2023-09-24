@@ -4,9 +4,9 @@ import styled from "styled-components";
 function Newsletter() {
   const handleSuccess = () => {
     try {
-      window.top.location.href = "https://www.lmdouglas.com/Success";
+      window.top.location.href = "/Success";
     } catch (e) {
-      window.location.href = "https://www.lmdouglas.com/Success";
+      window.location.href = "/Success";
     }
   };
 
