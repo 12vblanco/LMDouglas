@@ -2,7 +2,7 @@ import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
 import styled from "styled-components";
 
-export function Nav({}) {
+export function Nav() {
   const handleContactClick = () => {
     window.location.href = "/home#contact";
   };
@@ -13,32 +13,26 @@ export function Nav({}) {
         <Link to={"/home"}>Home</Link>{" "}
       </Li>
       <Li>
-        <Link to={"/home#bio"}>Bio</Link>{" "}
-      </Li>
-      <Li>
-        <Link to="/home#contactFrom" onClick={handleContactClick}>
-          Contact
-        </Link>
+        <Link to={"/bio"}>Bio</Link>{" "}
       </Li>
     </Ul>
   );
 }
 
 const Li = styled.li`
-  font-size: 22px;
+  font-size: 1.375rem;
   display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
-  margin: 12px 18px;
+  margin: 0.75rem 1.125rem;
   cursor: pointer;
   width: 50px;
-  @media (max-width: 600px) {
-    font-size: 20px;
+  @media (max-width: 940px) {
+    font-size: 1.125rem;
   }
 `;
 
 const Ul = styled.div`
   display: flex;
-  flex-direction: row;
 `;

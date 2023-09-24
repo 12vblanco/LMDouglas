@@ -13,18 +13,16 @@ const Logo = (props) => {
 
 const Div = styled.div`
   display: flex;
-  width: 100%;
-  max-width: 800px;
   justify-content: center;
   align-items: center;
 `;
 const LogoImg = styled.img`
   max-width: 90px;
-  margin: 0 12px;
+  margin: 0 0.75rem;
 
-  @media (max-width: 600px) {
-    min-width: 120px;
-  }
+  /* @media (max-width: 799px) {
+    max-width: 120px;
+  } */
 `;
 
 export default Logo;

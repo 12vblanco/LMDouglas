@@ -1,13 +1,13 @@
 import React from "react";
-import Bio from "../Bio";
 import Contact from "../contact/Contact";
 import Hero from "../hero/Hero";
+import Map from "../map/Map";
 
 const Home = () => {
   return (
     <>
       <Hero />
-      <Bio />
+      <Map />
       <Contact />
     </>
   );
