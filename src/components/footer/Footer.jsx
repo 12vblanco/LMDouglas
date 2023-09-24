@@ -123,7 +123,7 @@ const NameDiv = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: white;
+  color: var(--gold);
 `;
 
 const LogoDiv = styled.div`
