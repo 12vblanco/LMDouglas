@@ -26,7 +26,7 @@ const Footer = () => {
               .replace(/DOT/,'&#46;')"
             >
               <Img
-                className="email-img"
+                // className="email-img"
                 src="src/assets/imgs/email_img.png"
                 alt="info.lmdouglas@gmail.com"
                 // alt="info dot lmdouglas at gmail dot com"

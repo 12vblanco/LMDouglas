@@ -7,15 +7,14 @@ import Navbar from "./components/navigation/Navbar";
 import Bio from "./components/pages/Bio";
 import Home from "./components/pages/Home";
 import Terms from "./components/terms/Terms";
+import Success from "./components/pages/Success";
 
 function App() {
   return (
     <BrowserRouter>
       <CookieConsent
         buttonText="Accept"
-        // containerClasses="cookie_container"
         style={{
-          // fontFamily: "Montserrat",
           background: "var(--dark)",
           fontWeight: "500",
           height: "fit-content",
@@ -53,7 +52,7 @@ function App() {
         <Route path="/home#contact" element={<Home />} />
         <Route path="/bio" element={<Bio />} />
         <Route path="/terms" element={<Terms />} />
-        {/* <Route path="/success" element={<Success />} /> */}
+        <Route path="/success" element={<Success />} />
       </Routes>
       <Footer />
     </BrowserRouter>

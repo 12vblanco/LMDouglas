@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 function Newsletter() {
-  // const handleSuccess = () => {
-  //   try {
-  //     window.top.location.href = "https://www.lmdouglas.com/newsSuccess";
-  //   } catch (e) {
-  //     window.location.href = "https://www.lmdouglas.com/newsSuccess";
-  //   }
-  // };
+  const handleSuccess = () => {
+    try {
+      window.top.location.href = "https://www.lmdouglas.com/Success";
+    } catch (e) {
+      window.location.href = "https://www.lmdouglas.com/Success";
+    }
+  };
 
   return (
     <Div>
