@@ -1,68 +1,52 @@
 import React from "react";
 import CookieConsent from "react-cookie-consent";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navigation/Navbar";
-import Bio from "./components/pages/Bio";
 import Home from "./components/pages/Home";
-import Terms from "./components/terms/Terms";
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <CookieConsent
-        buttonText="Accept"
-        // containerClasses="cookie_container"
+        containerClasses="cookie_container"
         style={{
-          // fontFamily: "Montserrat",
-          background: "var(--dark)",
+          background: "rgba(2, 60, 113, 0.9)",
           fontWeight: "500",
-          height: "fit-content",
+          height: "10vh",
           alignItems: "center",
-          fontSize: "17px",
+          fontSize: "18px",
         }}
         buttonStyle={{
           borderRadius: "50px",
-          padding: "14px 26px",
-          marginRight: "16px",
+          padding: "20px 32px",
           fontSize: "18px",
           fontWeight: "700",
-          background: "var(--gold)",
+          background: "white",
           color: "rgb(2, 60, 113)",
         }}
-        contentStyle={{
-          textAlign: "left",
-          marginBottom: "18px",
-          padding: "12px",
-        }}
+        contentStyle={{ textAlign: "left", marginBottom: "12px" }}
       >
-        {" "}
-        I use cookies in my website. By clicking “Accept”, you consent to the
-        use of these the cookies. To learn more about how we use cookies and
-        your rights, please read our
+        This website uses cookies and third party software to monitor traffic
+        anonymously and improve user experience. For more info read my{" "}
         <Span>
-          <a href="/terms-of-service"> Terms of Service</a>
+          <a href="/terms" aria-label="Visit Victor Blanco's Terms Page">
+            terms & conditions
+          </a>
         </Span>
-        .
       </CookieConsent>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/home#contact" element={<Home />} />
-        <Route path="/bio" element={<Bio />} />
-        <Route path="/terms" element={<Terms />} />
-        {/* <Route path="/success" element={<Success />} /> */}
-      </Routes>
-      <Footer />
-    </BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <Home />
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
-
 const Span = styled.span`
   a {
-    color: var(--gold);
+    color: white;
     text-decoration: underline;
   }
 `;
