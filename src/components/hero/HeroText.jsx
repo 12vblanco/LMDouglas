@@ -21,7 +21,7 @@ const Description = styled.p`
   margin: 0;
   @media (max-width: 900px) {
     font-size: 1.1rem;
-    padding-right: 8px;
+    padding-right: 0;
   }
   @media (max-width: 800px) {
     max-width: 100vw;
