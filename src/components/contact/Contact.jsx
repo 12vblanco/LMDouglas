@@ -41,6 +41,7 @@ const Div = styled.div`
 const Img = styled.img`
   border-radius: 0.625rem;
   min-width: 320px;
+  border-radius: 50%;
   max-width: 420px;
   width: 40%;
   padding: 0.75rem;

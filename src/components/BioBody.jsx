@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import rocks from "../assets/bgs/rocks.png";
 import lor1 from "../assets/imgs/second_port 1.png";
 import texts from "../assets/texts";
 
@@ -11,19 +10,9 @@ const BioBody = () => {
         <Img src={lor1} />
         <Biography>{texts[0].biography}</Biography>
       </BioDiv>
-      {/* <OverlayDiv> */}
-      {/* <Overlay2 /> */}
-      {/* <DivHero> */}
-      {/* <DivHeroText>"somethign something somthing"</DivHeroText> */}
-      {/* </DivHero>{" "}
-      </OverlayDiv> */}
     </>
   );
 };
-
-const OverlayDiv = styled.div`
-  position: relative;
-`;
 
 const BioDiv = styled.div`
   width: 100%;
@@ -65,37 +54,6 @@ const Biography = styled.p`
     width: 100%;
     padding: 1.2rem;
   }
-`;
-
-// const Overlay2 = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100%;
-//   background: var(--dark);
-//   opacity: 0.92;
-//   z-index: 1;
-//   max-width: 100vw;
-// `;
-
-const DivHero = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(${rocks});
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 11.25rem;
-  color: white;
-  max-width: 100vw;
-`;
-
-const DivHeroText = styled.p`
-  font-size: 1.375rem;
-  z-index: 12;
-  font-style: italic;
 `;
 
 const Tag = styled.div``;

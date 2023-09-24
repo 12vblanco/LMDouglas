@@ -41,7 +41,9 @@ const Footer = () => {
                 rel="noreferrer"
                 aria-label="Visit Victor Blanco's Facebook Page"
               >
-                <FaFacebook />
+                <FaFacebook
+                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+                />
               </a>
             </Icon>
             <Icon>
@@ -51,7 +53,9 @@ const Footer = () => {
                 rel="noreferrer"
                 aria-label="Visit Lorraine's Instagram Page"
               >
-                <GrInstagram />
+                <GrInstagram
+                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+                />
               </a>
             </Icon>
           </SocialDiv>
@@ -123,7 +127,7 @@ const NameDiv = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  color: white;
+  color: var(--gold);
 `;
 
 const LogoDiv = styled.div`

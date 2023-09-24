@@ -35,8 +35,8 @@ const Div = styled.div`
   align-items: center;
   width: 100vw;
   margin: 0 auto;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  padding-top: 5rem;
+  padding-bottom: 8rem;
   color: var(--white);
   background: var(--dark);
   @media (max-width: 710px) {
@@ -60,7 +60,8 @@ const Img = styled.img`
 
 const H1 = styled.h1`
   font-size: 42px;
-  margin-bottom: 0.4rem;
+  margin-bottom: 2rem;
+  color: var(--gold);
 `;
 
 export default Map;
