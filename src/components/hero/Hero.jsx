@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import brick from "../../assets/bgs/rocks.png";
 import forest from "../../assets/imgs/forest.png";
 import HeroBook from "./HeroBook";
 import HeroText from "./HeroText";
@@ -18,10 +17,10 @@ const Hero = () => {
         </Content>
       </HeroSection>
       <BannerDiv>
-        <DivHero>
-          <Overlay2 />
-          {/* <DivHeroText>"somethign something somthing"</DivHeroText> */}
-        </DivHero>
+        {/* <DivHero>
+          <Overlay2 /> */}
+        {/* <DivHeroText>"somethign something somthing"</DivHeroText> */}
+        {/* </DivHero> */}
       </BannerDiv>
     </>
   );
@@ -96,30 +95,30 @@ const BannerDiv = styled.div`
   z-index: 1;
 `;
 
-const Overlay2 = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100%;
-  background: var(--dark);
-  opacity: 0.96;
-  z-index: 1;
-  @media (max-width: 600px) {
-    width: 100vw;
-  }
-`;
+// const Overlay2 = styled.div`
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100%;
+//   background: var(--dark);
+//   opacity: 0.96;
+//   z-index: 1;
+//   @media (max-width: 600px) {
+//     width: 100vw;
+//   }
+// `;
 
-const DivHero = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(${brick});
-  background-size: cover;
-  background-position: center;
-  width: 100vw;
-  height: 4.375rem;
-  color: white;
-`;
+// const DivHero = styled.div`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-image: url(${brick});
+//   background-size: cover;
+//   background-position: center;
+//   width: 100vw;
+//   height: 2.375rem;
+//   color: white;
+// `;
 
 export default Hero;

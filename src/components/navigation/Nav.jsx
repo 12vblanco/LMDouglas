@@ -15,11 +15,6 @@ export function Nav() {
       <Li>
         <Link to={"/bio"}>Bio</Link>{" "}
       </Li>
-      <Li>
-        <Link to="/home#contactFrom" onClick={handleContactClick}>
-          Contact
-        </Link>
-      </Li>
     </Ul>
   );
 }
@@ -40,5 +35,4 @@ const Li = styled.li`
 
 const Ul = styled.div`
   display: flex;
-  margin-right: 1.375rem;
 `;

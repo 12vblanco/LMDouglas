@@ -12,9 +12,39 @@ function App() {
   return (
     <BrowserRouter>
       <CookieConsent
-      /*... your CookieConsent props ...*/
+        buttonText="Accept"
+        // containerClasses="cookie_container"
+        style={{
+          // fontFamily: "Montserrat",
+          background: "var(--dark)",
+          fontWeight: "500",
+          height: "fit-content",
+          alignItems: "center",
+          fontSize: "17px",
+        }}
+        buttonStyle={{
+          borderRadius: "50px",
+          padding: "14px 26px",
+          marginRight: "16px",
+          fontSize: "18px",
+          fontWeight: "700",
+          background: "var(--gold)",
+          color: "rgb(2, 60, 113)",
+        }}
+        contentStyle={{
+          textAlign: "left",
+          marginBottom: "18px",
+          padding: "12px",
+        }}
       >
-        {/*... CookieConsent content ...*/}
+        {" "}
+        I use cookies in my website. By clicking “Accept”, you consent to the
+        use of these the cookies. To learn more about how we use cookies and
+        your rights, please read our
+        <Span>
+          <a href="/terms-of-service"> Terms of Service</a>
+        </Span>
+        .
       </CookieConsent>
       <Navbar />
       <Routes>
@@ -22,7 +52,6 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/home#contact" element={<Home />} />
         <Route path="/bio" element={<Bio />} />
-        {/* Uncomment and add components when they're ready */}
         <Route path="/terms" element={<Terms />} />
         {/* <Route path="/success" element={<Success />} /> */}
       </Routes>
@@ -33,7 +62,7 @@ function App() {
 
 const Span = styled.span`
   a {
-    color: white;
+    color: var(--gold);
     text-decoration: underline;
   }
 `;

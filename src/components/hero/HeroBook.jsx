@@ -28,6 +28,8 @@ const ImageContainer = styled.div`
 
 const BookImg = styled.img`
   max-width: 100%;
+  position: relative;
+  z-index: 1;
   height: auto;
   min-width: 320px;
   margin: 0.5rem;

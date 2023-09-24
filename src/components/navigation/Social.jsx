@@ -38,6 +38,7 @@ const Icon = styled.div`
   font-size: 2.25rem;
   margin: 1.125rem;
   padding-top: 0.5rem;
+  color: inherit;
   @media (max-width: 940px) {
     font-size: 1.625rem;
     margin: 0.25rem 0.75rem;

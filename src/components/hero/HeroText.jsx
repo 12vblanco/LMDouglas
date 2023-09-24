@@ -17,9 +17,13 @@ const Description = styled.p`
   /* font-size: 1.2rem; */
   line-height: 1.4;
   max-width: 620px;
+  padding-right: 28px;
   margin: 0;
+  @media (max-width: 900px) {
+    font-size: 1.1rem;
+  }
   @media (max-width: 800px) {
-    max-width: 100%;
+    max-width: 100vw;
     margin: 0 0 1rem 0;
   }
 `;
@@ -34,7 +38,7 @@ const TextContainer = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     margin: 0;
     position: relative;
     left: 50%;

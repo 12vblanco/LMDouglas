@@ -21,7 +21,7 @@ function Newsletter() {
             <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
               <div className="ml-form-embedContent" style={{}}>
                 <h4></h4>
-                <p>Join our newsletter</p>
+                <P>Join my newsletter</P>
               </div>
               <form
                 className="ml-block-form"
@@ -48,20 +48,21 @@ function Newsletter() {
                       </div>
                     </div>
                   </div>
+                  <DivCheck className="ml-form-checkboxRow ml-validate-required">
+                    <label className="checkbox">
+                      <input type="checkbox" />
+                      <label style={{ marginLeft: "12px", fontSize: "12px" }}>
+                        I would like to receive news and updates.
+                      </label>
+                    </label>
+                  </DivCheck>
                   <div className="ml-button-horizontal primary">
                     <InputButton type="submit" className="primary">
-                      Subscribe
+                      Join
                     </InputButton>
                   </div>
                 </div>
-                <DivCheck className="ml-form-checkboxRow ml-validate-required">
-                  <label className="checkbox">
-                    <input type="checkbox" />
-                    <CheckLabel>
-                      I would like to receive news and updates.
-                    </CheckLabel>
-                  </label>
-                </DivCheck>
+
                 <input type="hidden" name="ml-submit" value="1" />
                 <input type="hidden" name="anticsrf" value="true" />
               </form>
@@ -83,23 +84,22 @@ function Newsletter() {
 }
 
 const Div = styled.div`
-  color: white;
+  color: var(--dark);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 200px;
+  width: fit-content;
   height: 200px;
 `;
 
 const InputButton = styled.button`
   border-radius: 0.75rem;
-  outline: 0.1875rem solid var(--dark);
+  outline: 0.1275rem solid var(--dark);
   border: 0;
   margin-top: 1.125rem;
   font-size: 1rem;
-  padding: 0.6rem 0.4rem;
-  width: 6rem;
+  padding: 0.6rem 1rem;
+  width: fit-content;
   position: relative;
   left: 50%;
   transform: translate(-50%);
@@ -107,24 +107,30 @@ const InputButton = styled.button`
   cursor: pointer;
   @media (max-width: 600px) {
     font-size: 1.125rem;
-    padding: 0.75rem 0.5rem;
-    width: 150px;
   }
 `;
 
 const DivCheck = styled.div`
   display: flex;
-  flex: 1;
+  height: 30px;
+  margin-top: 12px;
+  justify-content: center;
+  align-items: center;
 `;
 const Input = styled.input`
   height: 40px;
   border-radius: 6px;
+  width: 100%;
   padding: 6px;
+  outline: 0.1275rem solid var(--dark);
+  border: 0;
+  font-size: 1rem;
+  padding: 0.6rem 0.4rem;
 `;
 
-const CheckLabel = styled.p`
-  font-size: 10px;
-  margin-left: 28px;
+const P = styled.p`
+  font-size: 26px;
+  margin: 12px 0;
 `;
 
 export default Newsletter;

@@ -10,19 +10,14 @@ import Social from "./Social";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 800);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const navItems = [
-    { label: "Home", link: "/" },
-    { label: "Contact", link: "Home#contact" },
-  ];
-
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 800);
+    const checkMobile = () => setIsMobile(window.innerWidth < 700);
     checkMobile();
 
     window.addEventListener("resize", checkMobile);
@@ -53,11 +48,7 @@ const Navbar = () => {
       ) : (
         <DivBurger>
           <Logo>{logo2}</Logo>
-          <Burger
-            handleToggle={handleToggle}
-            isOpen={isOpen}
-            navItems={navItems}
-          />
+          <Burger handleToggle={handleToggle} isOpen={isOpen} />
         </DivBurger>
       )}
     </ContainerNav>
@@ -66,6 +57,7 @@ const Navbar = () => {
 
 const ContainerNav = styled.div`
   position: absolute;
+  z-index: 9998; /* Add a high z-index value */
   width: 100%;
   height: fit-content;
   display: flex;
@@ -118,6 +110,8 @@ const DivNav = styled.div`
 `;
 
 const DivBurger = styled.div`
+  position: relative;
+  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-around;

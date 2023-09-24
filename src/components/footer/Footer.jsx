@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import footerBg from "../../assets/imgs/footer-bg.jpg";
 import logo2 from "../../assets/logo2.png";
-import Newsletter from "./Newsletter";
 
 const Footer = () => {
   return (
@@ -18,38 +17,52 @@ const Footer = () => {
             </LogoDiv>
             <Name>L.M. Douglas</Name>
             <SubName>'Chronicles of the Endless war'</SubName>
+            <a
+              href="mailto:info.lmdouglasATgmailDOTcom"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick="this.href=this.href
+              .replace(/AT/,'&#64;')
+              .replace(/DOT/,'&#46;')"
+            >
+              <Img
+                className="email-img"
+                src="src/assets/imgs/email_img.png"
+                alt="info.lmdouglas@gmail.com"
+                // alt="info dot lmdouglas at gmail dot com"
+              />
+            </a>
           </NameDiv>
-          <NewsDiv>
-            <Newsletter />
-            <SocialDiv>
-              <Icon>
-                <a
-                  href="https://www.facebook.com/VictorBlancoWebDesign/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Visit Victor Blanco's Facebook Page"
-                >
-                  <FaFacebook />
-                </a>
-              </Icon>
-              <Icon>
-                <a
-                  href="https://www.instagram.com/victorblancoweb/"
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label="Visit Victor Blanco's Instagram Page"
-                >
-                  <GrInstagram />
-                </a>
-              </Icon>
-            </SocialDiv>
-          </NewsDiv>
+          <SocialDiv>
+            <Icon>
+              <a
+                href="https://www.facebook.com/VictorBlancoWebDesign/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Victor Blanco's Facebook Page"
+              >
+                <FaFacebook />
+              </a>
+            </Icon>
+            <Icon>
+              <a
+                href="https://www.instagram.com/victorblancoweb/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Lorraine's Instagram Page"
+              >
+                <GrInstagram />
+              </a>
+            </Icon>
+          </SocialDiv>
         </Div>
         <CopyDiv>
           {" "}
           <a href="www.victorblancoweb.com" target="_blank">
             {" "}
-            <H4>Website Victor Blanco - {new Date().getFullYear()} &copy;</H4>
+            <H4>
+              Website Victor Blanco Web - {new Date().getFullYear()} &copy;
+            </H4>
           </a>
           <Link to="/terms">
             <Terms>Terms & Conditions</Terms>
@@ -75,7 +88,7 @@ const BackgroundLayer = styled.div`
   height: 100%;
   background: url(${footerBg}) no-repeat center center;
   background-size: cover;
-  opacity: 0.07;
+  opacity: 0.04;
   z-index: 0;
 `;
 
@@ -96,6 +109,10 @@ const Div = styled.div`
   align-items: center;
   height: 300px;
   width: 100%;
+
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const NameDiv = styled.div`
@@ -130,16 +147,13 @@ const SubName = styled.p`
   font-family: "lato", sans-serif;
 `;
 
-const NewsDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  font-size: 1.375rem;
-  font-family: "lato", sans-serif;
-`;
-
 const SocialDiv = styled.div`
   display: flex;
+  flex-direction: column;
   color: white;
+  @media (max-width: 400px) {
+    flex-direction: row;
+  }
 `;
 
 const Icon = styled.div`
@@ -157,7 +171,7 @@ const CopyDiv = styled.div`
   display: flex;
   max-width: fit-content;
   margin: 0 auto;
-  padding-bottom: 8px;
+  padding-bottom: 0px;
 `;
 
 const H4 = styled.div`
@@ -178,6 +192,11 @@ const Terms = styled.div`
   font-size: 14px;
   margin-left: 4px;
   color: var(--gold);
+`;
+
+const Img = styled.img`
+  max-width: 13.625rem;
+  margin-top: 0.4rem;
 `;
 
 export default Footer;

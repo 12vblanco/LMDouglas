@@ -1,16 +1,21 @@
 import React, { useEffect } from "react";
+import { FaFacebook } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Social from "./NavSocial";
 
 const Burger = ({ handleToggle, isOpen }) => {
   const handleHomeClick = () => {
     handleToggle();
     window.location.href = "/home";
   };
-  const handleContactClick = () => {
+  const handleBioClick = () => {
     handleToggle();
-    window.location.href = "/home#contact";
+    window.location.href = "/bio";
+  };
+  const handleTermsClick = () => {
+    handleToggle();
+    window.location.href = "/terms";
   };
 
   useEffect(() => {
@@ -40,8 +45,34 @@ const Burger = ({ handleToggle, isOpen }) => {
       <OverlayMenu isOpen={isOpen}>
         <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
-          <MenuItem onClick={handleContactClick}>Contact</MenuItem>
-          <LinkDiv>{<Social />}</LinkDiv>
+          <MenuItem onClick={handleBioClick}>Bio</MenuItem>
+          <MenuItem onClick={handleTermsClick}>Terms</MenuItem>
+          <Div>
+            <Icon>
+              <a
+                href="https://www.facebook.com/VictorBlancoWebDesign/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Victor Blanco's Facebook Page"
+              >
+                <FaFacebook
+                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+                />
+              </a>
+            </Icon>
+            <Icon>
+              <a
+                href="https://www.instagram.com/victorblancoweb/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Victor Blanco's Instagram Page"
+              >
+                <GrInstagram
+                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+                />
+              </a>
+            </Icon>
+          </Div>
         </MenuList>
       </OverlayMenu>
     </>
@@ -171,14 +202,16 @@ const MenuList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: var(--gold);
   margin-top: -182px;
   @media (max-width: 440px) {
     margin-top: -50%;
   }
 `;
 
-const LinkDiv = styled.div`
+const Div = styled.div`
   display: flex;
+  flex-direction: column;
   margin-top: 0.875rem;
 `;
 
@@ -186,34 +219,17 @@ const MenuItem = styled(Link)`
   font-size: 1.875rem;
   letter-spacing: -0.175rem;
   margin: 0.9375rem;
-  color: var(--dark);
+  color: var(--gold);
   transition: all 0.5 linear;
 `;
-// const MenuLink = styled.div`
-//   margin: 0.5rem;
-//   color: var(--white);
-//   transition: all 0.5 linear;
 
-//   a {
-//     font-size: 1.875rem;
-//     letter-spacing: -0.1062rem;
-//     margin: 1.125rem;
-//     color: var(--white);
-//     transition: all 0.5 linear;
-//     @media (max-width: 600px) {
-//       font-size: 1.625rem;
-//     }
-//     @media (max-width: 380px) {
-//       font-size: 1.625rem;
-//     }
-/* &:hover {
-      color: #fd8642;
-    // } */
-// }
-
-/* &:hover {
-    color: #fd8642;
-  } */
-// `;
+const Icon = styled.div`
+  margin: 1.125rem;
+  padding-top: 2rem;
+  @media (max-width: 940px) {
+    font-size: 1.625rem;
+    margin: 0.25rem 0.75rem;
+  }
+`;
 
 export default Burger;

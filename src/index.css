@@ -32,6 +32,11 @@ a {
   text-decoration: inherit;
   transition: all 0.3s linear;
 }
+
+a:active {
+  color: var(--gold);
+}
+
 a:hover {
   color: var(--dark-blue);
 }
