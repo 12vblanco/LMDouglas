@@ -5,6 +5,8 @@
   padding: 0;
   box-sizing: border-box;
   white-space: pre-line;
+
+  border: 1px solid red !important;
 }
 
 :root {
@@ -47,6 +49,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 h1 {

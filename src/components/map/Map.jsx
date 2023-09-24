@@ -47,7 +47,6 @@ const Div = styled.div`
 
 const Img = styled.img`
   border-radius: 0.625rem;
-  min-width: 340px;
   max-width: auto;
   width: 500px;
   padding: 0.75rem;
@@ -55,6 +54,7 @@ const Img = styled.img`
 
   @media (max-width: 600px) {
     margin-left: 0;
+    max-width: 100vw;
   }
 `;
 

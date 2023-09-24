@@ -23,6 +23,8 @@ const Navbar = () => {
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
+  console.log("Is mobile?", isMobile);
+  console.log("Window width:", window.innerWidth);
 
   return (
     <ContainerNav>
@@ -107,6 +109,9 @@ const DivNav = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const DivBurger = styled.div`

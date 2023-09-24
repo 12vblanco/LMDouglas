@@ -30,10 +30,10 @@ const Burger = ({ handleToggle, isOpen }) => {
     };
   }, [isOpen]);
 
-  const navItems = [
-    { label: "Home", link: "/" },
-    { label: "Contact", link: "/contact", isCTA: true },
-  ];
+  // const navItems = [
+  //   { label: "Home", link: "/" },
+  //   { label: "Contact", link: "/contact", isCTA: true },
+  // ];
 
   return (
     <>
@@ -83,7 +83,6 @@ const BurgerIcon = styled.div`
   position: relative;
   height: 3.125rem;
   width: 3.125rem;
-
   cursor: pointer;
   margin-top: 0.1875rem;
 
@@ -174,12 +173,12 @@ const BurgerIconLines = styled.span`
 `;
 
 const OverlayMenu = styled.div`
-  position: relative;
   position: fixed;
   margin-top: 8.74rem;
   top: 0;
   left: 0;
   width: 100vw;
+  max-width: 100vw;
   height: 100vh;
   background: var(--dark);
   display: flex;
@@ -189,9 +188,6 @@ const OverlayMenu = styled.div`
   transition: transform 0.3s ease-in-out;
   transform: ${(props) =>
     props.isOpen ? "translateX(0px)" : "translateX(100%)"};
-
-  @media (max-width: 600px) {
-  }
 `;
 
 const MenuList = styled.ul`
