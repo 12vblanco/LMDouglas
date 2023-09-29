@@ -73,7 +73,11 @@ function Newsletter() {
                     </label>
                   </DivCheck>
                   <div className="ml-button-horizontal primary">
-                    <InputButton type="submit" className="primary">
+                    <InputButton
+                      type="submit"
+                      className="primary"
+                      style={{ borderRadius: "6px", color: "#333" }}
+                    >
                       Join
                     </InputButton>
                   </div>
