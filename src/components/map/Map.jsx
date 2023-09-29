@@ -13,7 +13,16 @@ const Map = () => {
       <Div>
         <H1>The Gharantia Realm</H1>
         <a
-          href="https://lmdouglas.com/src/assets/imgs/map_large.jpg"
+          href="../../assets/imgs/map_large.jpg"
+          onclick="window.open('../../assets/imgs/map_large.jpg', 
+                         'windowName', 
+                         'width=2200, height=1876'); 
+              return false;"
+        >
+          Request Access
+        </a>
+        <a
+          href="../../assets/imgs/map_large.jpg"
           target="_blank"
           rel="noopener noreferrer"
         >
