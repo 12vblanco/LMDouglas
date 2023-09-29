@@ -66,7 +66,7 @@ function Newsletter() {
                   </div>
                   <DivCheck className="ml-form-checkboxRow ml-validate-required">
                     <label className="checkbox">
-                      <input type="checkbox" />
+                      <input type="checkbox" required />
                       <label style={{ marginLeft: "12px", fontSize: "12px" }}>
                         I would like to receive news and updates.
                       </label>
