@@ -32,7 +32,7 @@ const Footer = () => {
           <SocialDiv>
             <Icon>
               <a
-                href="https://www.facebook.com/VictorBlancoWebDesign/"
+                href="https://www.facebook.com/profile.php?id=100083225184556"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Visit Victor Blanco's Facebook Page"
@@ -44,7 +44,7 @@ const Footer = () => {
             </Icon>
             <Icon>
               <a
-                href="https://www.instagram.com/victorblancoweb/"
+                href="https://www.instagram.com/l_m_douglas_author/"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Visit Lorraine's Instagram Page"

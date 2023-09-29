@@ -15,6 +15,7 @@ function Newsletter() {
       });
 
       if (response.ok) {
+        e.target.reset();
         setIsSubscribed(true);
       } else {
         // Handle error
@@ -84,7 +85,7 @@ function Newsletter() {
             </div>
             <div
               className="ml-form-successBody row-success"
-              style={{ display: "none" }}
+              style={{ display: isSubscribed ? "block" : "none" }}
             >
               <div className="ml-form-successContent">
                 <h4>Thank you!</h4>
