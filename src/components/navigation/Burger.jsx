@@ -163,6 +163,7 @@ const BurgerIconLines = styled.span`
 `;
 
 const OverlayMenu = styled.div`
+  display: none;
   position: fixed;
   margin-top: 8.74rem;
   top: 0;
