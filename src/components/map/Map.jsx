@@ -12,13 +12,7 @@ const Map = () => {
       <Tag id="map" />
       <Div>
         <H1>The Gharantia Realm</H1>
-        <a
-          href="../../assets/imgs/map_large.jpg"
-          onclick="window.open('../../assets/imgs/map_large.jpg', 
-                         'windowName', 
-                         'width=2200, height=1876'); 
-              return false;"
-        >
+        <a href="../../assets/imgs/map_large.jpg" target="_blank">
           <Img
             src={map}
             srcSet={`${map} 1x, ${mapX2} 2x, ${mapX3} 3x`}
