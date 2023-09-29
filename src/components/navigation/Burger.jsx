@@ -171,6 +171,7 @@ const OverlayMenu = styled.div`
   max-width: 100vw;
   height: 100vh;
   background: var(--dark);
+  overflow-x: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
