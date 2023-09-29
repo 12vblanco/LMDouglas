@@ -94,7 +94,7 @@ function Newsletter() {
               >
                 <h4 style={{ color: "var(--gold)" }}>Thank you!</h4>
                 <p style={{ fontSize: "14px" }}>
-                  Thank you for joining my subscriber list.
+                  For joining my subscriber list.
                 </p>
               </div>
             </div>
