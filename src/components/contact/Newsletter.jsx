@@ -86,10 +86,16 @@ function Newsletter() {
             <div
               className="ml-form-successBody row-success"
               style={{ display: isSubscribed ? "block" : "none" }}
+              // style={{ display: isSubscribed ? "block" : "block" }}
             >
-              <div className="ml-form-successContent">
-                <h4>Thank you!</h4>
-                <p>You have successfully joined our subscriber list.</p>
+              <div
+                className="ml-form-successContent"
+                style={{ position: "absolute" }}
+              >
+                <h4 style={{ color: "var(--gold)" }}>Thank you!</h4>
+                <p style={{ fontSize: "14px" }}>
+                  You have successfully joined our subscriber list.
+                </p>
               </div>
             </div>
           </div>
