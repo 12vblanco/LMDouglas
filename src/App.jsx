@@ -6,16 +6,17 @@ import Footer from "./components/footer/Footer";
 import Navbar from "./components/navigation/Navbar";
 import Bio from "./components/pages/Bio";
 import Home from "./components/pages/Home";
-import Terms from "./components/terms/Terms";
 import Success from "./components/pages/Success";
+import Terms from "./components/terms/Terms";
 
 function App() {
   return (
     <BrowserRouter>
       <CookieConsent
+        containerClasses="cookie_container"
         buttonText="Accept"
         style={{
-          background: "var(--dark)",
+          background: "rgba(20, 20, 20, 0.9)",
           fontWeight: "500",
           height: "fit-content",
           alignItems: "center",
@@ -41,7 +42,7 @@ function App() {
         use of these the cookies. To learn more about how we use cookies and
         your rights, please read our
         <Span>
-          <a href="/terms-of-service"> Terms of Service</a>
+          <a href="/terms"> Terms of Service</a>
         </Span>
         .
       </CookieConsent>
