@@ -128,6 +128,9 @@ const InputButton = styled.button`
   background: #fff;
   cursor: pointer;
   box-sizing: border-box;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
   color: var(--dark) !important;
   @media (max-width: 600px) {
     font-size: 1.125rem;
