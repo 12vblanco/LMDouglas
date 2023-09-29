@@ -105,7 +105,8 @@ const Name = styled.div`
 const DivNav = styled.div`
   width: 100%;
   height: auto;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
   display: flex;
   justify-content: flex-end;
   align-items: center;

@@ -1,27 +1,17 @@
 import React, { useEffect } from "react";
+import { FaFacebook } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-// import { Social } from "../../../Social";
 
 const Burger = ({ handleToggle, isOpen }) => {
   const handleHomeClick = () => {
     handleToggle();
     window.location.href = "/home";
   };
-  const handleContactClick = () => {
+  const handleBioClick = () => {
     handleToggle();
-    window.location.href = "/contact";
-  };
-  const handleEventsClick = () => {
-    handleToggle();
-    window.location.href = "/events";
-  };
-  const handleServicesClick = () => {
-    handleToggle();
-    window.location.href = "/home#services";
-  };
-  const handleBlankClick = () => {
-    handleToggle();
+    window.location.href = "/bio";
   };
 
   useEffect(() => {
@@ -36,11 +26,6 @@ const Burger = ({ handleToggle, isOpen }) => {
     };
   }, [isOpen]);
 
-  const navItems = [
-    { label: "Home", link: "/" },
-    { label: "Contact", link: "/contact", isCTA: true },
-  ];
-
   return (
     <>
       <BurgerIcon className={isOpen ? "open" : "closed"} onClick={handleToggle}>
@@ -51,10 +36,33 @@ const Burger = ({ handleToggle, isOpen }) => {
       <OverlayMenu isOpen={isOpen}>
         <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
-          <MenuItem onClick={handleEventsClick}>Events</MenuItem>
-          <MenuItem onClick={handleServicesClick}>Services</MenuItem>
-          <MenuItem onClick={handleContactClick}>Contact</MenuItem>
-          <LinkDiv>{/* <Social backgroundColor="#fff" /> */}</LinkDiv>
+          <MenuItem onClick={handleBioClick}>Bio</MenuItem>
+          <Div>
+            <Icon>
+              <a
+                href="https://www.facebook.com/profile.php?id=100083225184556"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Victor Blanco's Facebook Page"
+              >
+                <FaFacebook
+                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+                />
+              </a>
+            </Icon>
+            <Icon>
+              <a
+                href="https://www.instagram.com/l_m_douglas_author/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Victor Blanco's Instagram Page"
+              >
+                <GrInstagram
+                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+                />
+              </a>
+            </Icon>
+          </Div>
         </MenuList>
       </OverlayMenu>
     </>
@@ -63,46 +71,44 @@ const Burger = ({ handleToggle, isOpen }) => {
 
 const BurgerIcon = styled.div`
   position: relative;
-  height: 50px;
-  width: 50px;
-  margin-right: 10%;
-
+  height: 3.125rem;
+  width: 3.125rem;
   cursor: pointer;
-  margin-top: 3px;
+  margin-top: 0.1875rem;
 
   &.open .line-1 {
     position: absolute;
-    top: 16px;
-    left: 10px;
-    transform: rotate(45deg) translate(2px, 4px);
+    top: 1rem;
+    left: 0.625rem;
+    transform: rotate(45deg) translate(0.125rem, 0.25rem);
   }
 
   &.open .line-2 {
     position: absolute;
-    left: 9.6px;
-    top: 27px;
-    transform: rotate(-45deg) translate(5px, -5px);
+    left: 0.6rem;
+    top: 1.6875rem;
+    transform: rotate(-45deg) translate(0.3125rem, -0.3125rem);
   }
 
   &.open .line-3 {
     background: transparent;
-    transform: translateX(-70px);
+    transform: translateX(-4.375rem);
   }
 
   &.closed .line1 {
     position: absolute;
     top: 13px;
     border-radius: 30% 30% 0 0;
-    height: 6px;
+    height: 0.375rem;
   }
   &.closed .line2 {
     position: absolute;
-    top: 29px;
+    top: 1.8125rem;
     border-radius: 0 0 22% 22%;
-    height: 6px;
+    height: 0.375rem;
   }
   &.closed .line3 {
-    background: #000;
+    background: var(--dark);
   }
 
   @media (min-width: 900px) {
@@ -115,9 +121,9 @@ const BurgerIconLines = styled.span`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 5px;
-  width: 30px;
-  background-color: #000;
+  height: 0.3125rem;
+  width: 1.875rem;
+  background-color: var(--dark);
   transition: all 0.3s ease-in-out;
 
   &::before,
@@ -125,14 +131,14 @@ const BurgerIconLines = styled.span`
   &::nth-child(3) {
     content: "";
     position: absolute;
-    height: 4px;
-    width: 30px;
-    background-color: #000;
+    height: 0.25rem;
+    width: 1.875rem;
+    background-color: var(--dark);
     transition: all 0.3s ease-in-out;
   }
 
   &::before {
-    top: -9px;
+    top: -0.5625rem;
     left: 0;
     border-radius: 50% 50% 0 0;
     transform: ${(props) =>
@@ -142,28 +148,29 @@ const BurgerIconLines = styled.span`
   }
 
   &::after {
-    top: 7.6px;
+    top: 0.475rem;
     left: 0;
     border-radius: 0 0 50% 50%;
-    transform: rotate(45deg) translate(4px, 4px);
+    transform: rotate(45deg) translate(0.25rem, 0.25rem);
   }
 
   &:nth-child(3) {
-    top: 21.2px;
+    top: 1.325rem;
     left: 18;
-    height: 3.6px;
+    height: 0.225rem;
     transform-origin: center;
   }
 `;
 
 const OverlayMenu = styled.div`
   position: fixed;
-  margin-top: 140px;
+  margin-top: 8.74rem;
   top: 0;
   left: 0;
   width: 100vw;
+  max-width: 100vw;
   height: 100vh;
-  background: #fff;
+  background: var(--dark);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,48 +188,33 @@ const MenuList = styled.ul`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -180px;
+  color: var(--gold);
+  margin-top: -182px;
   @media (max-width: 440px) {
     margin-top: -50%;
   }
 `;
 
-const LinkDiv = styled.div`
+const Div = styled.div`
   display: flex;
-  margin-top: 14px;
+  flex-direction: column;
+  margin-top: 0.875rem;
 `;
 
 const MenuItem = styled(Link)`
-  font-size: 30px;
-  letter-spacing: -2.8px;
-  margin: 15px;
-  color: #333;
+  font-size: 1.875rem;
+  letter-spacing: -0.175rem;
+  margin: 0.9375rem;
+  color: var(--gold);
   transition: all 0.5 linear;
 `;
-const MenuLink = styled.div`
-  margin: 8px;
-  color: #333;
-  transition: all 0.5 linear;
 
-  a {
-    font-size: 30px;
-    letter-spacing: -1.7px;
-    margin: 18px;
-    color: #333;
-    transition: all 0.5 linear;
-    @media (max-width: 600px) {
-      font-size: 26px;
-    }
-    @media (max-width: 380px) {
-      font-size: 26px;
-    }
-    &:hover {
-      color: #fd8642;
-    }
-  }
-
-  &:hover {
-    color: #fd8642;
+const Icon = styled.div`
+  margin: 1.125rem;
+  padding-top: 2rem;
+  @media (max-width: 940px) {
+    font-size: 1.625rem;
+    margin: 0.25rem 0.75rem;
   }
 `;
 
