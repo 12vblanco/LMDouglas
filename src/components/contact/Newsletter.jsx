@@ -119,8 +119,8 @@ const Div = styled.div`
 `;
 
 const InputButton = styled.button`
-  border-radius: 0.75rem;
-  outline: 0.1275rem solid var(--dark);
+  border-radius: 0.75rem !important;
+  outline: 0.1275rem solid var(--dark) !important;
   border: 0;
   margin-top: 1.125rem;
   font-size: 1rem;
