@@ -3,6 +3,7 @@ import styled from "styled-components";
 import map from "../../assets/imgs/map.jpg";
 import mapX2 from "../../assets/imgs/mapX2.jpg";
 import mapX3 from "../../assets/imgs/mapX3.jpg";
+import mapLarge from "../../assets/imgs/map_large.jpg";
 import Tag from "../Tag";
 
 const Map = () => {
@@ -12,7 +13,8 @@ const Map = () => {
       <Tag id="map" />
       <Div>
         <H1>The Gharantia Realm</H1>
-        <a href="../../assets/imgs/map_large.jpg" target="_blank">
+        <a href={mapLarge} target="_blank" rel="noopener noreferrer">
+          {" "}
           <Img
             src={map}
             srcSet={`${map} 1x, ${mapX2} 2x, ${mapX3} 3x`}
