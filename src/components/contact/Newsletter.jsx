@@ -2,11 +2,26 @@ import React from "react";
 import styled from "styled-components";
 
 function Newsletter() {
-  const handleSuccess = () => {
+  const [isSubscribed, setIsSubscribed] = React.useState(false);
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
+
+    const formElement = document.querySelector(".ml-block-form");
+    const formData = new FormData(formElement);
+
     try {
-      window.top.location.href = "/Success";
-    } catch (e) {
-      window.location.href = "/Success";
+      const response = await fetch(formElement.action, {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsSubscribed(true);
+      } else {
+        // Handle error
+      }
+    } catch (error) {
+      // Handle network error
     }
   };
 
@@ -28,7 +43,6 @@ function Newsletter() {
                 action="https://assets.mailerlite.com/jsonp/568565/forms/98256287424316664/subscribe"
                 data-code=""
                 method="post"
-                target="_blank"
               >
                 <div className="ml-form-horizontalRow">
                   <div className="ml-input-horizontal">
@@ -57,7 +71,11 @@ function Newsletter() {
                     </label>
                   </DivCheck>
                   <div className="ml-button-horizontal primary">
-                    <InputButton type="submit" className="primary">
+                    <InputButton
+                      type="button"
+                      className="primary"
+                      onClick={handleFormSubmit}
+                    >
                       Join
                     </InputButton>
                   </div>
@@ -69,7 +87,7 @@ function Newsletter() {
             </div>
             <div
               className="ml-form-successBody row-success"
-              style={{ display: "none" }}
+              style={{ display: "block" }}
             >
               <div className="ml-form-successContent">
                 <h4>Thank you!</h4>
@@ -79,6 +97,11 @@ function Newsletter() {
           </div>
         </div>
       </div>
+      <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style={{ display: "none" }}
+      ></iframe>
     </Div>
   );
 }
