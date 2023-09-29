@@ -34,7 +34,7 @@ const HeroSection = styled.div`
   margin-top: 7.125rem;
   max-width: 100vw;
 
-  @media (max-width: 600px) {
+  @media (max-width: 800px) {
     height: fit-content;
     padding: 1.375rem 0.75rem;
   }
