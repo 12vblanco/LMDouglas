@@ -19,13 +19,6 @@ const Map = () => {
                          'width=2200, height=1876'); 
               return false;"
         >
-          Request Access
-        </a>
-        <a
-          href="../../assets/imgs/map_large.jpg"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           <Img
             src={map}
             srcSet={`${map} 1x, ${mapX2} 2x, ${mapX3} 3x`}
