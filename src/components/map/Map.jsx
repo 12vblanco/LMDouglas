@@ -13,7 +13,7 @@ const Map = () => {
       <Div>
         <H1>The Gharantia Realm</H1>
         <a
-          href="src/assets/imgs/map_large.jpg"
+          href="https://lmdouglas.com/src/assets/imgs/map_large.jpg"
           target="_blank"
           rel="noopener noreferrer"
         >
