@@ -125,12 +125,10 @@ const InputButton = styled.button`
   margin-top: 1.125rem;
   font-size: 1rem;
   padding: 0.6rem 1rem;
-  width: fit-content;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
   background: #fff;
   cursor: pointer;
+  box-sizing: border-box;
+  color: var(--dark) !important;
   @media (max-width: 600px) {
     font-size: 1.125rem;
   }
