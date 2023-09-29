@@ -6,11 +6,10 @@ function Newsletter() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
 
-    const formElement = document.querySelector(".ml-block-form");
-    const formData = new FormData(formElement);
+    const formData = new FormData(e.target);
 
     try {
-      const response = await fetch(formElement.action, {
+      const response = await fetch(e.target.action, {
         method: "POST",
         body: formData,
       });
@@ -43,6 +42,8 @@ function Newsletter() {
                 action="https://assets.mailerlite.com/jsonp/568565/forms/98256287424316664/subscribe"
                 data-code=""
                 method="post"
+                // target="_blank"
+                onSubmit={handleFormSubmit}
               >
                 <div className="ml-form-horizontalRow">
                   <div className="ml-input-horizontal">
@@ -71,11 +72,7 @@ function Newsletter() {
                     </label>
                   </DivCheck>
                   <div className="ml-button-horizontal primary">
-                    <InputButton
-                      type="button"
-                      className="primary"
-                      onClick={handleFormSubmit}
-                    >
+                    <InputButton type="submit" className="primary">
                       Join
                     </InputButton>
                   </div>
@@ -97,11 +94,6 @@ function Newsletter() {
           </div>
         </div>
       </div>
-      <iframe
-        name="hidden_iframe"
-        id="hidden_iframe"
-        style={{ display: "none" }}
-      ></iframe>
     </Div>
   );
 }
