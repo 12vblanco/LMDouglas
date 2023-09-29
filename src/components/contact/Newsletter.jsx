@@ -76,7 +76,7 @@ function Newsletter() {
                     <InputButton
                       type="submit"
                       className="primary"
-                      style={{ borderRadius: "6px", color: "#333" }}
+                      style={{ borderRadius: "0.75rem", color: "#333" }}
                     >
                       Join
                     </InputButton>
