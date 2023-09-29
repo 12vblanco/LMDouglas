@@ -87,7 +87,7 @@ function Newsletter() {
             </div>
             <div
               className="ml-form-successBody row-success"
-              style={{ display: "block" }}
+              style={{ display: "none" }}
             >
               <div className="ml-form-successContent">
                 <h4>Thank you!</h4>
