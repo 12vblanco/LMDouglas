@@ -7,6 +7,11 @@ import footerBg from "../../assets/imgs/footer-bg.jpg";
 import logo2 from "../../assets/logo2.png";
 
 const Footer = () => {
+  const handleEmailClick = (e) => {
+    e.currentTarget.href = e.currentTarget.href
+      .replace(/AT/, "@")
+      .replace(/DOT/, ".");
+  };
   return (
     <Container>
       <BackgroundLayer />
@@ -22,9 +27,7 @@ const Footer = () => {
               href="mailto:info.lmdouglasATgmailDOTcom"
               target="_blank"
               rel="noopener noreferrer"
-              onClick="this.href=this.href
-              .replace(/AT/,'&#64;')
-              .replace(/DOT/,'&#46;')"
+              onClick={handleEmailClick}
             >
               <Img src={emailImg} alt="info dot lmdouglas at gmail dot com" />
             </a>
