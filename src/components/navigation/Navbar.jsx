@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo2 from "../../assets/logo.png";
 import logo from "../../assets/logoSolo.png";
+import Burger from "./Burger";
 import Logo from "./Logo";
 import { Nav } from "./Nav";
 import Social from "./Social";
