@@ -49,7 +49,7 @@ const Navbar = () => {
       ) : (
         <DivBurger>
           <Logo>{logo2}</Logo>
-          {/* <Burger handleToggle={handleToggle} isOpen={isOpen} /> */}
+          <Burger handleToggle={handleToggle} isOpen={isOpen} />
         </DivBurger>
       )}
     </ContainerNav>
