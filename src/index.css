@@ -7,9 +7,9 @@
   white-space: pre-line;
 }
 
-* {
+/* * {
   border: 1px solid red !important;
-}
+} */
 
 :root {
   font-family: "Lato", sans-serif;

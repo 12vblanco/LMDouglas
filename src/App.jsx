@@ -3,7 +3,6 @@ import CookieConsent from "react-cookie-consent";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import Footer from "./components/footer/Footer";
-import Navbar from "./components/navigation/Navbar";
 import Bio from "./components/pages/Bio";
 import Home from "./components/pages/Home";
 import Success from "./components/pages/Success";
@@ -46,7 +45,7 @@ function App() {
         </Span>
         .
       </CookieConsent>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

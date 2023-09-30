@@ -17,7 +17,7 @@ const Description = styled.p`
   /* font-size: 1.2rem; */
   line-height: 1.4;
   max-width: 620px;
-  padding-right: 28px;
+  /* padding-right: 1.75rem; */
   margin: 0;
   @media (max-width: 900px) {
     font-size: 1.1rem;
@@ -48,13 +48,24 @@ const TextContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  /* font-size: 2rem; */
+  padding-top: 1rem;
   margin: 0;
   color: var(--gold);
+  @media (max-width: 1104px) {
+    padding-top: 3rem;
+  }
+  @media (max-width: 942px) {
+    padding-top: 5rem;
+  }
+  @media (max-width: 900px) {
+    padding-top: 2rem;
+  }
+  @media (max-width: 850px) {
+    padding-top: 5rem;
+  }
 `;
 
 const Subtitle = styled.h2`
-  /* font-size: 1.4rem; */
   margin: 0 0 0.625rem;
 `;
 
