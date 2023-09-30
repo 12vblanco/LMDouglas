@@ -24,6 +24,9 @@ const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   width: 46%;
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 const BookImg = styled.img`
