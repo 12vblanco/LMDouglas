@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import logo2 from "../../assets/logo.png";
 import logo from "../../assets/logoSolo.png";
-import Burger from "./Burger";
 import Logo from "./Logo";
 import { Nav } from "./Nav";
 import Social from "./Social";
@@ -50,7 +49,7 @@ const Navbar = () => {
       ) : (
         <DivBurger>
           <Logo>{logo2}</Logo>
-          <Burger handleToggle={handleToggle} isOpen={isOpen} />
+          {/* <Burger handleToggle={handleToggle} isOpen={isOpen} /> */}
         </DivBurger>
       )}
     </ContainerNav>
