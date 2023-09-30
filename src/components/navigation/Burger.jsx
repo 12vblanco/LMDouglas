@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { FaFacebook } from "react-icons/fa";
+import { GrInstagram } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -31,11 +33,11 @@ const Burger = ({ handleToggle, isOpen }) => {
         <BurgerIconLines className={isOpen ? "open line-2" : "closed line2"} />
         <BurgerIconLines className={isOpen ? "open line-3" : "closed line3"} />
       </BurgerIcon>
-      <OverlayMenu isOpen={isOpen}>
-        <MenuList>
+      <OverlayMenu>
+        {/* <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
           <MenuItem onClick={handleBioClick}>Bio</MenuItem>
-          {/* <Div>
+          <Div>
             <Icon>
               <a
                 href="https://www.facebook.com/profile.php?id=100083225184556"
@@ -60,8 +62,8 @@ const Burger = ({ handleToggle, isOpen }) => {
                 />
               </a>
             </Icon>
-          </Div> */}
-        </MenuList>
+          </Div>
+        </MenuList> */}
       </OverlayMenu>
     </>
   );
