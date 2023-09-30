@@ -33,38 +33,38 @@ const Burger = ({ handleToggle, isOpen }) => {
         <BurgerIconLines className={isOpen ? "open line-2" : "closed line2"} />
         <BurgerIconLines className={isOpen ? "open line-3" : "closed line3"} />
       </BurgerIcon>
-      <OverlayMenu isOpen={isOpen}>
-        <MenuList>
-          <MenuItem onClick={handleHomeClick}>Home</MenuItem>
-          <MenuItem onClick={handleBioClick}>Bio</MenuItem>
-          <Div>
-            <Icon>
-              <a
-                href="https://www.facebook.com/profile.php?id=100083225184556"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Visit Victor Blanco's Facebook Page"
-              >
-                <FaFacebook
-                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
-                />
-              </a>
-            </Icon>
-            <Icon>
-              <a
-                href="https://www.instagram.com/l_m_douglas_author/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Visit Victor Blanco's Instagram Page"
-              >
-                <GrInstagram
-                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
-                />
-              </a>
-            </Icon>
-          </Div>
-        </MenuList>
-      </OverlayMenu>
+      <OverlayMenu isOpen={isOpen} />
+      <MenuList>
+        <MenuItem onClick={handleHomeClick}>Home</MenuItem>
+        <MenuItem onClick={handleBioClick}>Bio</MenuItem>
+        <Div>
+          <Icon>
+            <a
+              href="https://www.facebook.com/profile.php?id=100083225184556"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit Victor Blanco's Facebook Page"
+            >
+              <FaFacebook
+                style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+              />
+            </a>
+          </Icon>
+          <Icon>
+            <a
+              href="https://www.instagram.com/l_m_douglas_author/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Visit Victor Blanco's Instagram Page"
+            >
+              <GrInstagram
+                style={{ color: "var(--gold)", fontSize: "2.6rem" }}
+              />
+            </a>
+          </Icon>
+        </Div>
+      </MenuList>
+      {/* </OverlayMenu> */}
     </>
   );
 };
