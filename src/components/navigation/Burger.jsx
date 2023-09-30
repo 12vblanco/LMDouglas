@@ -28,11 +28,11 @@ const Burger = ({ handleToggle, isOpen }) => {
 
   return (
     <>
-      <BurgerIcon className={isOpen ? "open" : "closed"} onClick={handleToggle}>
+      {/* <BurgerIcon className={isOpen ? "open" : "closed"} onClick={handleToggle}>
         <BurgerIconLines className={isOpen ? "open line-1" : "closed line1"} />
         <BurgerIconLines className={isOpen ? "open line-2" : "closed line2"} />
         <BurgerIconLines className={isOpen ? "open line-3" : "closed line3"} />
-      </BurgerIcon>
+      </BurgerIcon> */}
       <OverlayMenu>
         {/* <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
