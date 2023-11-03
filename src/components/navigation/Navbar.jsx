@@ -32,7 +32,7 @@ const Navbar = () => {
         <>
           <Link to="/">
             <LogoDiv>
-              <Logo>{logo}</Logo>
+              <Logo src={logo} alt="Lorraine's Logo" />
               <Name>L.M. Douglas</Name>
             </LogoDiv>
           </Link>
@@ -49,7 +49,7 @@ const Navbar = () => {
         </>
       ) : (
         <DivBurger>
-          <Logo>{logo2}</Logo>
+          <Logo src={logo2} alt="Lorraine's Logo" />
           <Burger handleToggle={handleToggle} isOpen={isOpen} />
         </DivBurger>
       )}

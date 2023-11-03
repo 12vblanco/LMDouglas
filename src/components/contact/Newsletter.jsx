@@ -35,7 +35,6 @@ function Newsletter() {
           <div className="ml-form-embedWrapper embedForm">
             <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
               <div className="ml-form-embedContent" style={{}}>
-                <h4></h4>
                 <P>Join my newsletter</P>
               </div>
               <form
