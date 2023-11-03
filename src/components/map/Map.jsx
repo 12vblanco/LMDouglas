@@ -18,7 +18,7 @@ const Map = () => {
           <Img
             src={map}
             srcSet={`${map} 1x, ${mapX2} 2x, ${mapX3} 3x`}
-            alt="Map of Gargantia"
+            alt="Map of Gharantia"
           />
         </a>
       </Div>
@@ -56,7 +56,7 @@ const Img = styled.img`
   }
 `;
 
-const H1 = styled.h1`
+const H1 = styled.h2`
   font-size: 42px;
   margin-bottom: 0.4rem;
   color: var(--gold);

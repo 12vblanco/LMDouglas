@@ -8,7 +8,9 @@ const Form = (props) => {
   return (
     <Div>
       <FromContainer>
-        <H1>Please send us any requests or queries using this form:</H1>
+        <FormTitle>
+          Please send us any requests or queries using this form:
+        </FormTitle>
         <StyledForm
           name="BasketForm"
           method="POST"
@@ -84,7 +86,7 @@ const FromContainer = styled.div`
   }
 `;
 
-const H1 = styled.h1`
+const FormTitle = styled.h3`
   font-size: 1.375rem;
   padding-left: 3rem;
   margin-bottom: 1rem;

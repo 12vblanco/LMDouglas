@@ -30,7 +30,7 @@ const Tag = styled.div``;
 
 const HeroSection = styled.div`
   position: relative;
-  min-height: calc(100vh - 122px);
+  height: calc(100vh - 122px);
   height: fit-content;
   margin-top: 7.125rem;
   padding: 1.6rem 0;

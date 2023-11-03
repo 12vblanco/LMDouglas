@@ -5,7 +5,7 @@ const HeroText = () => {
   return (
     <>
       <TextContainer>
-        <Title>‘Gharantia's Guardian’</Title>
+        <Title>LM Douglas - ‘Gharantia's Guardian’</Title>
         {/* <Subtitle>By L.M. Douglas</Subtitle> */}
         <Description>{texts[1].synopsis}</Description>
       </TextContainer>
@@ -51,6 +51,7 @@ const Title = styled.h1`
   padding-top: 1rem;
   margin: 0;
   color: var(--gold);
+  margin-bottom: 0.4rem;
   @media (max-width: 1104px) {
     padding-top: 3rem;
   }
