@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo2 from "../../assets/logo.png";
-import logo from "../../assets/logoSolo.png";
+import logo2f from "../../assets/logo.png";
+import logo2 from "../../assets/logo.webp";
+import logof from "../../assets/logoSolo.png";
+import logo from "../../assets/logoSolo.webp";
 import Burger from "./Burger";
 import Logo from "./Logo";
 import { Nav } from "./Nav";
@@ -32,7 +34,12 @@ const Navbar = () => {
         <>
           <Link to="/">
             <LogoDiv>
-              <Logo src={logo} alt="Lorraine's Logo" />
+              <Logo>{logo}</Logo>
+              <picture>
+                <source srcSet={logo} type="image/webp" />
+                <source srcSet={logof} type="image/png" />
+                <Logo src={logo} alt="L.M. Douglas Logo" />
+              </picture>
               <Name>L.M. Douglas</Name>
             </LogoDiv>
           </Link>
@@ -49,7 +56,11 @@ const Navbar = () => {
         </>
       ) : (
         <DivBurger>
-          <Logo src={logo2} alt="Lorraine's Logo" />
+          <picture>
+            <source srcSet={logo2} type="image/webp" />
+            <source srcSet={logo2f} type="image/png" />
+            <Logo src={logo2} alt="L.M. Douglas Logo" />
+          </picture>{" "}
           <Burger handleToggle={handleToggle} isOpen={isOpen} />
         </DivBurger>
       )}
@@ -79,7 +90,7 @@ const LogoDiv = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  min-width: 380px;
+  min-width: 400px;
   height: fit-content;
   justify-content: center;
   align-items: center;
@@ -91,12 +102,13 @@ const Name = styled.div`
   font-family: "IM Fell Double Pica";
   display: flex;
   flex-wrap: nowrap;
+  width: fit-content;
   font-size: 2.375rem;
-  width: 100%;
+  width: auto;
   height: auto;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 1.375rem;
+  padding-left: 1rem;
   @media (max-width: 940px) {
     font-size: 2rem;
   }

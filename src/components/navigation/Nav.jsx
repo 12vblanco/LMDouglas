@@ -33,6 +33,6 @@ const Li = styled.li`
   }
 `;
 
-const Ul = styled.div`
+const Ul = styled.ul`
   display: flex;
 `;

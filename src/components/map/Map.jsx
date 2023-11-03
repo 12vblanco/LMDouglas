@@ -1,9 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import map from "../../assets/imgs/map.jpg";
-import mapX2 from "../../assets/imgs/mapX2.jpg";
-import mapX3 from "../../assets/imgs/mapX3.jpg";
-import mapLarge from "../../assets/imgs/map_large.jpg";
+import mapf from "../../assets/imgs/map.jpg";
+import map from "../../assets/imgs/map.webp";
+import mapX2f from "../../assets/imgs/mapX2.jpg";
+import mapX2 from "../../assets/imgs/mapX2.webp";
+import mapX3f from "../../assets/imgs/mapX3.jpg";
+import mapX3 from "../../assets/imgs/mapX3.webp";
+import mapLargef from "../../assets/imgs/map_large.jpg";
 import Tag from "../Tag";
 
 const Map = () => {
@@ -13,14 +16,23 @@ const Map = () => {
       <Tag id="map" />
       <Div>
         <H1>The Gharantia Realm</H1>
-        <a href={mapLarge} target="_blank" rel="noopener noreferrer">
-          {" "}
-          <Img
-            src={map}
+        <picture>
+          <source
             srcSet={`${map} 1x, ${mapX2} 2x, ${mapX3} 3x`}
-            alt="Map of Gharantia"
+            type="image/webp"
           />
-        </a>
+          <source
+            srcSet={`${mapf} 1x, ${mapX2f} 2x, ${mapX3f} 3x`}
+            type="image/jpeg"
+          />
+          <a href={mapLargef} target="_blank" rel="noopener noreferrer">
+            <Img
+              src={map}
+              srcSet={`${map} 1x, ${mapX2} 2x, ${mapX3} 3x`}
+              alt="Map of Gharantia"
+            />
+          </a>
+        </picture>
       </Div>
     </>
   );

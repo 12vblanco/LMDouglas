@@ -1,8 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import contact from "../../assets/imgs/contact.jpg";
-import contactX2 from "../../assets/imgs/contactX2.jpg";
-import contactX3 from "../../assets/imgs/contactX3.jpg";
+import contactf from "../../assets/imgs/contact.jpg";
+import contact from "../../assets/imgs/contact.webp";
+import contactX2f from "../../assets/imgs/contactX2.jpg";
+import contactX2 from "../../assets/imgs/contactX2.webp";
+import contactX3f from "../../assets/imgs/contactX3.jpg";
+import contactX3 from "../../assets/imgs/contactX3.webp";
 import Tag from "../Tag";
 import Newsletter from "./Newsletter";
 const Contact = () => {
@@ -12,11 +15,21 @@ const Contact = () => {
       <Tag id="contactFrom" />
       <Div>
         <Newsletter />
-        <Img
-          src={contact}
-          srcSet={`${contact} 1x, ${contactX2} 2x, ${contactX3} 3x`}
-          alt="Contact Image"
-        />
+        <picture>
+          <source
+            srcSet={`${contact} 1x, ${contactX2} 2x, ${contactX3} 3x`}
+            type="image/webp"
+          />
+          <source
+            srcSet={`${contactf} 1x, ${contactX2f} 2x, ${contactX3f} 3x`}
+            type="image/jpeg"
+          />
+          <Img
+            src={contact}
+            srcSet={`${contact} 1x, ${contactX2} 2x, ${contactX3} 3x`}
+            alt="Contact Image"
+          />
+        </picture>
       </Div>
     </>
   );

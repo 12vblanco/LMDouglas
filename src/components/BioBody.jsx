@@ -1,14 +1,19 @@
 import React from "react";
 import styled from "styled-components";
-import rocks from "../assets/bgs/rocks.png";
-import lor1 from "../assets/imgs/second_port 1.png";
+import lor1f from "../assets/imgs/bio1.png";
+import lor1 from "../assets/imgs/bio1.webp";
 import texts from "../assets/texts";
 
 const BioBody = () => {
   return (
     <>
       <BioDiv>
-        <Img src={lor1} />
+        <picture>
+          <source srcSet={lor1} type="image/webp" />
+          <source srcSet={lor1f} type="image/png" />
+          <Img src={lor1} alt="L.M. Douglas portrait" />
+        </picture>
+
         <Biography>{texts[0].biography}</Biography>
       </BioDiv>
       {/* <OverlayDiv> */}
@@ -27,9 +32,9 @@ const OverlayDiv = styled.div`
 
 const BioDiv = styled.div`
   width: 100%;
-  margin-top: 8.125rem;
-  height: auto;
-  padding: 5rem 0;
+  margin-top: 7.125rem;
+  height: calc(100vh - 432px);
+  /* padding: 5rem 0; */
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -65,37 +70,6 @@ const Biography = styled.p`
     width: 100%;
     padding: 1.2rem;
   }
-`;
-
-// const Overlay2 = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100%;
-//   background: var(--dark);
-//   opacity: 0.92;
-//   z-index: 1;
-//   max-width: 100vw;
-// `;
-
-const DivHero = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(${rocks});
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-  height: 11.25rem;
-  color: white;
-  max-width: 100vw;
-`;
-
-const DivHeroText = styled.p`
-  font-size: 1.375rem;
-  z-index: 12;
-  font-style: italic;
 `;
 
 const Tag = styled.div``;

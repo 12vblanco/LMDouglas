@@ -2,9 +2,12 @@ import { FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import emailImg from "../../assets/imgs/email_img.png";
-import footerBg from "../../assets/imgs/footer-bg.jpg";
-import logo2 from "../../assets/logo2.png";
+import emailImgf from "../../assets/imgs/email_img.png";
+import emailImg from "../../assets/imgs/email_img.webp";
+import footerBgf from "../../assets/imgs/footer-bg.jpg";
+import footerBg from "../../assets/imgs/footer-bg.webp";
+import logo2f from "../../assets/logo2.png";
+import logo2 from "../../assets/logo2.webp";
 
 const Footer = () => {
   const handleEmailClick = (e) => {
@@ -19,7 +22,11 @@ const Footer = () => {
         <Div>
           <NameDiv>
             <LogoDiv>
-              <Logo src={logo2} alt="L.M. Douglas Logo" />
+              <picture>
+                <source srcSet={logo2} type="image/webp" />
+                <source srcSet={logo2f} type="image/png" />
+                <Logo src={logo2} alt="L.M. Douglas Logo" />
+              </picture>
             </LogoDiv>
             <Name>L.M. Douglas</Name>
             <SubName>'Chronicles of the Endless war'</SubName>
@@ -29,7 +36,11 @@ const Footer = () => {
               rel="noopener noreferrer"
               onClick={handleEmailClick}
             >
-              <Img src={emailImg} alt="info dot lmdouglas at gmail dot com" />
+              <picture>
+                <source srcSet={emailImg} type="image/webp" />
+                <source srcSet={emailImgf} type="image/png" />
+                <Img src={emailImg} alt="info dot lmdouglas at gmail dot com" />
+              </picture>
             </a>
           </NameDiv>
           <SocialDiv>
@@ -89,8 +100,14 @@ const BackgroundLayer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background: url(${footerBg}) no-repeat center center;
+  background-image: url(${footerBgf});
+  background-image: image-set(
+    url(${footerBg}) type("image/webp"),
+    url(${footerBgf}) type("image/jpeg")
+  );
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   opacity: 0.04;
   z-index: 0;
 `;

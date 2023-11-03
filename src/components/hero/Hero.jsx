@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import forest from "../../assets/imgs/forest.png";
+import forestf from "../../assets/imgs/forest.png";
+import forest from "../../assets/imgs/forest.webp";
 import HeroBook from "./HeroBook";
 import HeroText from "./HeroText";
 
@@ -16,12 +17,6 @@ const Hero = () => {
           <HeroText />
         </Content>
       </HeroSection>
-      <BannerDiv>
-        {/* <DivHero>
-          <Overlay2 /> */}
-        {/* <DivHeroText>"somethign something somthing"</DivHeroText> */}
-        {/* </DivHero> */}
-      </BannerDiv>
     </>
   );
 };
@@ -50,6 +45,10 @@ const BackgroundImage = styled.div`
   max-width: 100vw;
   height: 100%;
   background-image: url(${forest});
+  background-image: image-set(
+    url(${forest}) type("image/webp"),
+    url(${forestf}) type("image/png")
+  );
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -86,41 +85,5 @@ const Content = styled.div`
     max-width: 100%;
   }
 `;
-
-const BannerDiv = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  height: 100%;
-  position: relative;
-  z-index: 1;
-`;
-
-// const Overlay2 = styled.div`
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100vw;
-//   height: 100%;
-//   background: var(--dark);
-//   opacity: 0.96;
-//   z-index: 1;
-//   @media (max-width: 600px) {
-//     width: 100vw;
-//   }
-// `;
-
-// const DivHero = styled.div`
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   background-image: url(${brick});
-//   background-size: cover;
-//   background-position: center;
-//   width: 100vw;
-//   height: 2.375rem;
-//   color: white;
-// `;
 
 export default Hero;
