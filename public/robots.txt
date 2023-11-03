@@ -3,4 +3,4 @@ Disallow: /cgi-bin/
 Disallow: /tmp/
 Disallow: /junk/
 
-Sitemap: https://lmdouglas.com/sitemap.xml
+Sitemap: https://lmdouglas.com/public/sitemap.xml
