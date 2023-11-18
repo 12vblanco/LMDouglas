@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import contactf from "../../assets/imgs/contact.jpg";
-import contact from "../../assets/imgs/contact.webp";
-import contactX2f from "../../assets/imgs/contactX2.jpg";
-import contactX2 from "../../assets/imgs/contactX2.webp";
-import contactX3f from "../../assets/imgs/contactX3.jpg";
-import contactX3 from "../../assets/imgs/contactX3.webp";
+import contactf from "../../assets/imgs/free_novella.png";
+import contact from "../../assets/imgs/free_novella.webp";
+import contactX2f from "../../assets/imgs/free_novellaX2.png";
+import contactX2 from "../../assets/imgs/free_novellaX2.webp";
+import contactX3f from "../../assets/imgs/free_novellaX3.png";
+import contactX3 from "../../assets/imgs/free_novellaX3.webp";
 import Tag from "../Tag";
 import Newsletter from "./Newsletter";
 const Contact = () => {

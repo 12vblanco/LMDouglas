@@ -1,36 +1,43 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import logo2f from "../../assets/logo.png";
-import logo2 from "../../assets/logo.webp";
 import logof from "../../assets/logoSolo.png";
 import logo from "../../assets/logoSolo.webp";
-import Burger from "./Burger";
 import Logo from "./Logo";
 import { Nav } from "./Nav";
-import Social from "./Social";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 700);
+    const checkMobile = () => setIsMobile(window.innerWidth < 640);
     checkMobile();
 
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-  console.log("Is mobile?", isMobile);
-  console.log("Window width:", window.innerWidth);
 
   return (
     <ContainerNav>
-      {!isMobile ? (
+      {isMobile ? (
+        <>
+          <Link to="/">
+            <LogoDiv>
+              <Logo>{logo}</Logo>
+              <picture>
+                <source srcSet={logo} type="image/webp" />
+                <source srcSet={logof} type="image/png" />
+                <Logo src={logo} alt="L.M. Douglas Logo" />
+              </picture>
+              <Column>
+                <Name>L.M. Douglas</Name>
+                <Nav />
+              </Column>
+            </LogoDiv>
+          </Link>
+        </>
+      ) : (
         <>
           <Link to="/">
             <LogoDiv>
@@ -49,20 +56,8 @@ const Navbar = () => {
                 <Nav />
               </Div>
             </Column>
-            <Div>
-              <Social />
-            </Div>
           </DivNav>
         </>
-      ) : (
-        <DivBurger>
-          <picture>
-            <source srcSet={logo2} type="image/webp" />
-            <source srcSet={logo2f} type="image/png" />
-            <Logo src={logo2} alt="L.M. Douglas Logo" />
-          </picture>{" "}
-          <Burger handleToggle={handleToggle} isOpen={isOpen} />
-        </DivBurger>
       )}
     </ContainerNav>
   );
@@ -70,20 +65,12 @@ const Navbar = () => {
 
 const ContainerNav = styled.div`
   position: absolute;
-  z-index: 9998; /* Add a high z-index value */
+  z-index: 9998;
   width: 100%;
-  height: fit-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.625rem;
   max-width: 1240px;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  @media (max-width: 400px) {
-    padding: 0.125rem 0 1.125rem 0;
-  }
 `;
 
 const LogoDiv = styled.div`
@@ -91,11 +78,13 @@ const LogoDiv = styled.div`
   flex-direction: row;
   width: 100%;
   min-width: 400px;
-  height: fit-content;
+  height: auto;
   justify-content: center;
   align-items: center;
-  padding: 0.75rem;
   cursor: pointer;
+  @media (max-width: 640px) {
+    align-items: center;
+  }
 `;
 
 const Name = styled.div`
@@ -112,6 +101,9 @@ const Name = styled.div`
   @media (max-width: 940px) {
     font-size: 2rem;
   }
+  @media (max-width: 370px) {
+    font-size: 1.7rem;
+  }
 `;
 
 const DivNav = styled.div`
@@ -122,19 +114,6 @@ const DivNav = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  @media (max-width: 700px) {
-    display: none;
-  }
-`;
-
-const DivBurger = styled.div`
-  position: relative;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-top: 1.25rem;
-  width: 100%;
 `;
 
 const Div = styled.div`
@@ -146,6 +125,8 @@ const Div = styled.div`
 const Column = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 `;
 
 export default Navbar;

@@ -31,8 +31,17 @@ const Li = styled.li`
   @media (max-width: 940px) {
     font-size: 1.125rem;
   }
+  @media (max-width: 370px) {
+    font-size: 1rem;
+  }
 `;
 
 const Ul = styled.ul`
   display: flex;
+  padding-right: 1.6rem;
+  @media (max-width: 640px) {
+    width: 100%;
+    padding-right: 0;
+    justify-content: center;
+  }
 `;

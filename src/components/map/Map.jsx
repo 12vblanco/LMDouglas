@@ -69,7 +69,7 @@ const Img = styled.img`
 `;
 
 const H1 = styled.h2`
-  font-size: 42px;
+  font-size: 30px;
   margin-bottom: 0.4rem;
   color: var(--gold);
 `;

@@ -36,6 +36,8 @@ function Newsletter() {
             <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
               <div className="ml-form-embedContent" style={{}}>
                 <P>Join my newsletter</P>
+                <Span>Receive free my novella 'Gharantia's Shadow'</Span>{" "}
+                <Span2>(remember to check the email's junk folder)</Span2>
               </div>
               <form
                 className="ml-block-form"
@@ -156,7 +158,14 @@ const Input = styled.input`
 
 const P = styled.p`
   font-size: 26px;
-  margin: 12px 0;
+  margin: 12px 0 0 0;
+`;
+const Span = styled.p`
+  font-size: 13px;
+`;
+const Span2 = styled.p`
+  font-size: 11px;
+  margin: 0 0 12px 0;
 `;
 
 export default Newsletter;

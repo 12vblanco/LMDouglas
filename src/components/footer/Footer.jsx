@@ -1,4 +1,5 @@
-import { FaFacebook } from "react-icons/fa";
+import { FaFacebook, FaTiktok } from "react-icons/fa";
+import { FaThreads } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -43,32 +44,61 @@ const Footer = () => {
               </picture>
             </a>
           </NameDiv>
-          <SocialDiv>
-            <Icon>
-              <a
-                href="https://www.facebook.com/profile.php?id=100083225184556"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Visit Victor Blanco's Facebook Page"
-              >
-                <FaFacebook
-                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
-                />
-              </a>
-            </Icon>
-            <Icon>
-              <a
-                href="https://www.instagram.com/l_m_douglas_author/"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Visit Lorraine's Instagram Page"
-              >
-                <GrInstagram
-                  style={{ color: "var(--gold)", fontSize: "2.6rem" }}
-                />
-              </a>
-            </Icon>
-          </SocialDiv>
+          <SocialContainer>
+            {" "}
+            <SocialDiv>
+              <Icon>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100083225184556"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit Victor Blanco's Facebook Page"
+                >
+                  <FaFacebook
+                    style={{ color: "var(--gold)", fontSize: "2.2rem" }}
+                  />
+                </a>
+              </Icon>
+              <Icon>
+                <a
+                  href="https://www.instagram.com/l_m_douglas_author/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit Lorraine's Instagram Page"
+                >
+                  <GrInstagram
+                    style={{ color: "var(--gold)", fontSize: "2.2rem" }}
+                  />
+                </a>
+              </Icon>
+            </SocialDiv>
+            <SocialDiv>
+              <Icon>
+                <a
+                  href="https://www.tiktok.com/@lmdouglasauthor?_t=8fg6aYH55l2&_r=1"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit Victor Blanco's Facebook Page"
+                >
+                  <FaTiktok
+                    style={{ color: "var(--gold)", fontSize: "2.2rem" }}
+                  />
+                </a>
+              </Icon>
+              <Icon>
+                <a
+                  href="https://www.threads.net/@l_m_douglas_author"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Visit Lorraine's Tik Tok Page"
+                >
+                  <FaThreads
+                    style={{ color: "var(--gold)", fontSize: "2.2rem" }}
+                  />
+                </a>
+              </Icon>{" "}
+            </SocialDiv>
+          </SocialContainer>
         </Div>
         <CopyDiv>
           {" "}
@@ -175,11 +205,15 @@ const SocialDiv = styled.div`
     flex-direction: row;
   }
 `;
+const SocialContainer = styled.div`
+  display: flex;
+`;
 
 const Icon = styled.div`
   margin: 0.625rem 0;
-  font-size: 2.375rem;
+  font-size: 2.075rem;
   margin-right: 2.25rem;
+
   a {
     color: white !important;
   }
@@ -192,6 +226,9 @@ const CopyDiv = styled.div`
   max-width: fit-content;
   margin: 0 auto;
   padding-bottom: 0px;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 
 const H4 = styled.div`
@@ -200,7 +237,10 @@ const H4 = styled.div`
   align-items: flex-end;
   font-size: 13px;
   color: var(--white);
-
+  @media (max-width: 400px) {
+    font-size: 12px;
+    padding-bottom: 0.4rem;
+  }
   a {
     color: white;
   }
@@ -212,6 +252,9 @@ const Terms = styled.div`
   font-size: 14px;
   margin-left: 4px;
   color: var(--gold);
+  @media (max-width: 400px) {
+    font-size: 11px;
+  }
 `;
 
 const Img = styled.img`
