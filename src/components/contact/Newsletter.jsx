@@ -161,7 +161,7 @@ const P = styled.p`
   margin: 12px 0 0 0;
 `;
 const Span = styled.p`
-  font-size: 13px;
+  font-size: 14px;
 `;
 const Span2 = styled.p`
   font-size: 11px;
