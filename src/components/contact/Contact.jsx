@@ -14,7 +14,6 @@ const Contact = () => {
       {" "}
       <Tag id="contactFrom" />
       <Div>
-        <Newsletter />
         <picture>
           <source
             srcSet={`${contact} 1x, ${contactX2} 2x, ${contactX3} 3x`}
@@ -30,6 +29,7 @@ const Contact = () => {
             alt="Contact Image"
           />
         </picture>
+        <Newsletter />
       </Div>
     </>
   );
