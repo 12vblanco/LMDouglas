@@ -157,7 +157,7 @@ const Input = styled.input`
 `;
 
 const P = styled.p`
-  font-size: 26px;
+  font-size: 28px;
   margin: 12px 0 0 0;
 `;
 const Span = styled.p`
