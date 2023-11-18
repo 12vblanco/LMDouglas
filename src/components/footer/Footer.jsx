@@ -21,29 +21,6 @@ const Footer = () => {
       <BackgroundLayer />
       <ContentLayer>
         <Div>
-          <NameDiv>
-            <LogoDiv>
-              <picture>
-                <source srcSet={logo2} type="image/webp" />
-                <source srcSet={logo2f} type="image/png" />
-                <Logo src={logo2} alt="L.M. Douglas Logo" />
-              </picture>
-            </LogoDiv>
-            <Name>L.M. Douglas</Name>
-            <SubName>'Chronicles of the Endless war'</SubName>
-            <a
-              href="mailto:info.lmdouglasATgmailDOTcom"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={handleEmailClick}
-            >
-              <picture>
-                <source srcSet={emailImg} type="image/webp" />
-                <source srcSet={emailImgf} type="image/png" />
-                <Img src={emailImg} alt="info dot lmdouglas at gmail dot com" />
-              </picture>
-            </a>
-          </NameDiv>
           <SocialContainer>
             {" "}
             <SocialDiv>
@@ -99,6 +76,29 @@ const Footer = () => {
               </Icon>{" "}
             </SocialDiv>
           </SocialContainer>
+          <NameDiv>
+            <LogoDiv>
+              <picture>
+                <source srcSet={logo2} type="image/webp" />
+                <source srcSet={logo2f} type="image/png" />
+                <Logo src={logo2} alt="L.M. Douglas Logo" />
+              </picture>
+            </LogoDiv>
+            <Name>L.M. Douglas</Name>
+            <SubName>'Chronicles of the Endless war'</SubName>
+            <a
+              href="mailto:info.lmdouglasATgmailDOTcom"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleEmailClick}
+            >
+              <picture>
+                <source srcSet={emailImg} type="image/webp" />
+                <source srcSet={emailImgf} type="image/png" />
+                <Img src={emailImg} alt="info dot lmdouglas at gmail dot com" />
+              </picture>
+            </a>
+          </NameDiv>
         </Div>
         <CopyDiv>
           {" "}
