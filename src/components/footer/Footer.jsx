@@ -160,7 +160,7 @@ const Div = styled.div`
   height: 300px;
   width: 100%;
 
-  @media (max-width: 400px) {
+  @media (max-width: 440px) {
     flex-direction: column;
   }
 `;
