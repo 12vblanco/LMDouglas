@@ -16,25 +16,15 @@ const BioBody = () => {
 
         <Biography>{texts[0].biography}</Biography>
       </BioDiv>
-      {/* <OverlayDiv> */}
-      {/* <Overlay2 /> */}
-      {/* <DivHero> */}
-      {/* <DivHeroText>"somethign something somthing"</DivHeroText> */}
-      {/* </DivHero>{" "}
-      </OverlayDiv> */}
     </>
   );
 };
-
-const OverlayDiv = styled.div`
-  position: relative;
-`;
 
 const BioDiv = styled.div`
   width: 100%;
   margin-top: 7.125rem;
   height: calc(100vh - 432px);
-  /* padding: 5rem 0; */
+  min-height: fit-content;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -47,6 +37,7 @@ const BioDiv = styled.div`
   @media (max-width: 650px) {
     flex-direction: column-reverse;
     padding: 1rem;
+    height: 100%;
   }
 `;
 
