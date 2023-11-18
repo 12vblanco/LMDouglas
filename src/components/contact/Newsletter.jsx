@@ -35,9 +35,12 @@ function Newsletter() {
           <div className="ml-form-embedWrapper embedForm">
             <div className="ml-form-embedBody ml-form-embedBodyHorizontal row-form">
               <div className="ml-form-embedContent" style={{}}>
-                <P>Join my newsletter to</P>
-                <P>Receive free my novella</P>{" "}
-                <Span>(remember to check the email's junk folder)</Span>
+                <P>Sign up to receive your copy of ‘Gharantia’s Shadow’!</P>{" "}
+                <Span>
+                  Subscribe to L.M Douglas’s mailing list to receive special
+                  offers, writing updates and news about oncoming releases.
+                  (Remember to check the spam folder)
+                </Span>
               </div>
               <form
                 className="ml-block-form"
@@ -116,7 +119,7 @@ const Div = styled.div`
   justify-content: center;
   align-items: center;
   width: fit-content;
-  height: 200px;
+  height: fit-content;
 `;
 
 const InputButton = styled.button`
@@ -157,12 +160,27 @@ const Input = styled.input`
 `;
 
 const P = styled.p`
-  font-size: 28px;
+  padding-top: 1rem;
+  font-size: 32px;
   margin: 0;
   font-weight: 700;
+  max-width: 320px;
+  text-transform: capitalize;
+  @media (max-width: 600px) {
+    font-size: 24px;
+  }
 `;
 const Span = styled.p`
   font-size: 15px;
+  margin-bottom: 0.6rem;
+  max-width: 300px;
+
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+const Span2 = styled.p`
+  font-size: 12px;
   margin-bottom: 0.6rem;
 `;
 

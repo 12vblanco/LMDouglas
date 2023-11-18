@@ -43,6 +43,7 @@ const Div = styled.div`
   max-width: 1240px;
   margin: 0 auto;
   height: fit-content;
+  padding: 2rem 1rem;
   color: var(--dark);
   @media (max-width: 710px) {
     flex-direction: column;
