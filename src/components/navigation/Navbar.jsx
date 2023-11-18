@@ -84,6 +84,7 @@ const LogoDiv = styled.div`
   cursor: pointer;
   @media (max-width: 640px) {
     align-items: center;
+    min-width: auto;
   }
 `;
 

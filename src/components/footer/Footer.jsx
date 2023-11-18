@@ -160,7 +160,7 @@ const Div = styled.div`
   height: 300px;
   width: 100%;
 
-  @media (max-width: 440px) {
+  @media (max-width: 700px) {
     flex-direction: column;
   }
 `;
@@ -201,7 +201,8 @@ const SocialDiv = styled.div`
   display: flex;
   flex-direction: column;
   color: white;
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
+    margin-top: 1rem;
     flex-direction: row;
   }
 `;
