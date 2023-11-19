@@ -13,7 +13,12 @@ const Hero = () => {
         <BackgroundImage />
         <Overlay />
         <Content>
-          <HeroBook />
+          <a
+            href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
+            target="_blank"
+          >
+            <HeroBook />
+          </a>
           <HeroText />
         </Content>
       </HeroSection>

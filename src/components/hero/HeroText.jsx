@@ -8,16 +8,22 @@ const HeroText = () => {
         <Title>LM Douglas - ‘Gharantia's Guardian’</Title>
         {/* <Subtitle>By L.M. Douglas</Subtitle> */}
         <Description>{texts[1].synopsis}</Description>
+        <br />
+        {/* <a
+          href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
+          target="_blank"
+          style={{ color: "white", fontWeight: "700" }}
+        >
+          Find the book here!
+        </a> */}
       </TextContainer>
     </>
   );
 };
 
 const Description = styled.p`
-  /* font-size: 1.2rem; */
   line-height: 1.4;
   max-width: 620px;
-  /* padding-right: 1.75rem; */
   margin: 0;
   @media (max-width: 900px) {
     font-size: 1.1rem;

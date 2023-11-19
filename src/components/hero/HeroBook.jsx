@@ -36,7 +36,7 @@ const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 46%;
+  /* width: 46%; */
   @media (max-width: 800px) {
     width: 100%;
   }
