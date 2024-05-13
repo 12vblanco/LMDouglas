@@ -11,7 +11,7 @@ const Social = () => {
           href="https://www.facebook.com/profile.php?id=100083225184556"
           target="_blank"
           rel="noreferrer"
-          aria-label="Visit Victor Blanco's Facebook Page"
+          aria-label="Visit LG Douglas' Facebook Page"
         >
           <FaFacebook />
         </a>
@@ -21,7 +21,7 @@ const Social = () => {
           href="https://www.instagram.com/l_m_douglas_author/"
           target="_blank"
           rel="noreferrer"
-          aria-label="Visit Victor Blanco's Instagram Page"
+          aria-label="Visit LG Douglas' Instagram Page"
         >
           <GrInstagram />
         </a>

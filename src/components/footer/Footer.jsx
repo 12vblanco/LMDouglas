@@ -29,7 +29,7 @@ const Footer = () => {
                   href="https://www.facebook.com/profile.php?id=100083225184556"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Visit Victor Blanco's Facebook Page"
+                  aria-label="Visit LG Douglas' Facebook Page"
                 >
                   <FaFacebook
                     style={{ color: "var(--gold)", fontSize: "2.2rem" }}
@@ -55,7 +55,7 @@ const Footer = () => {
                   href="https://www.tiktok.com/@lmdouglasauthor?_t=8fg6aYH55l2&_r=1"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Visit Victor Blanco's Facebook Page"
+                  aria-label="Visit LG Douglas' Facebook Page"
                 >
                   <FaTiktok
                     style={{ color: "var(--gold)", fontSize: "2.2rem" }}
@@ -102,7 +102,7 @@ const Footer = () => {
         </Div>
         <CopyDiv>
           {" "}
-          <a href="www.victorblancoweb.com" target="_blank">
+          <a href="https://www.victorblancoweb.com" target="_blank">
             {" "}
             <H4>
               Website Victor Blanco Web - {new Date().getFullYear()} &copy;
