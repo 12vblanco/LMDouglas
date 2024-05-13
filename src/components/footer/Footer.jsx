@@ -102,7 +102,7 @@ const Footer = () => {
         </Div>
         <CopyDiv>
           {" "}
-          <a href="https://www.victorblancoweb.com" target="_blank">
+          <a href="https://victorblancoweb.com/" target="_blank">
             {" "}
             <H4>
               Website Victor Blanco Web - {new Date().getFullYear()} &copy;
