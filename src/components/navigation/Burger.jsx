@@ -13,6 +13,10 @@ const Burger = ({ handleToggle, isOpen }) => {
     handleToggle();
     window.location.href = "/bio";
   };
+  const handleBlogClick = () => {
+    handleToggle();
+    window.location.href = "/blog";
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -37,6 +41,7 @@ const Burger = ({ handleToggle, isOpen }) => {
         <MenuList>
           <MenuItem onClick={handleHomeClick}>Home</MenuItem>
           <MenuItem onClick={handleBioClick}>Bio</MenuItem>
+          <MenuItem onClick={handleBlogClick}>Blog</MenuItem>
           <Div>
             <Icon>
               <a

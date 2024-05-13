@@ -5,6 +5,7 @@ import styled from "styled-components";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navigation/Navbar";
 import Bio from "./components/pages/Bio";
+import Blog from "./components/pages/Blog";
 import Home from "./components/pages/Home";
 import Success from "./components/pages/Success";
 import Terms from "./components/terms/Terms";
@@ -52,6 +53,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/home#contact" element={<Home />} />
         <Route path="/bio" element={<Bio />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/terms" element={<Terms />} />
         <Route path="/success" element={<Success />} />
       </Routes>

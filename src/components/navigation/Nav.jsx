@@ -15,6 +15,9 @@ export function Nav() {
       <Li>
         <Link to={"/bio"}>Bio</Link>{" "}
       </Li>
+      <Li>
+        <Link to={"/blog"}>Blog</Link>{" "}
+      </Li>
     </Ul>
   );
 }
