@@ -13,10 +13,6 @@ const Hero = () => {
         <BackgroundImage />
         <Overlay />
         <Content>
-          {/* <a
-            href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
-            target="_blank"
-          > */}
           <Column>
             <HeroBook />
             <ButtonDiv>
@@ -117,8 +113,6 @@ const Column = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  max-width: 1280px;
-  width: 90%;
   margin: 0 auto;
   height: 100%;
   position: relative;
