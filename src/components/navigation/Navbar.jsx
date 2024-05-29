@@ -19,49 +19,56 @@ const Navbar = () => {
   }, []);
 
   return (
-    <ContainerNav>
-      {isMobile ? (
-        <>
-          <Link to="/">
-            <LogoDiv>
-              <Logo>{logo}</Logo>
-              <picture>
-                <source srcSet={logo} type="image/webp" />
-                <source srcSet={logof} type="image/png" />
-                <Logo src={logo} alt="L.M. Douglas Logo" />
-              </picture>
-              <Column>
+    <Main>
+      <ContainerNav>
+        {isMobile ? (
+          <>
+            <Link to="/">
+              <LogoDiv>
+                <Logo>{logo}</Logo>
+                <picture>
+                  <source srcSet={logo} type="image/webp" />
+                  <source srcSet={logof} type="image/png" />
+                  <Logo src={logo} alt="L.M. Douglas Logo" />
+                </picture>
+                <Column>
+                  <Name>L.M. Douglas</Name>
+                  <Nav />
+                </Column>
+              </LogoDiv>
+            </Link>
+          </>
+        ) : (
+          <>
+            <Link to="/">
+              <LogoDiv>
+                <Logo>{logo}</Logo>
+                <picture>
+                  <source srcSet={logo} type="image/webp" />
+                  <source srcSet={logof} type="image/png" />
+                  <Logo src={logo} alt="L.M. Douglas Logo" />
+                </picture>
                 <Name>L.M. Douglas</Name>
-                <Nav />
+              </LogoDiv>
+            </Link>
+            <DivNav>
+              <Column>
+                <Div>
+                  <Nav />
+                </Div>
               </Column>
-            </LogoDiv>
-          </Link>
-        </>
-      ) : (
-        <>
-          <Link to="/">
-            <LogoDiv>
-              <Logo>{logo}</Logo>
-              <picture>
-                <source srcSet={logo} type="image/webp" />
-                <source srcSet={logof} type="image/png" />
-                <Logo src={logo} alt="L.M. Douglas Logo" />
-              </picture>
-              <Name>L.M. Douglas</Name>
-            </LogoDiv>
-          </Link>
-          <DivNav>
-            <Column>
-              <Div>
-                <Nav />
-              </Div>
-            </Column>
-          </DivNav>
-        </>
-      )}
-    </ContainerNav>
+            </DivNav>
+          </>
+        )}
+      </ContainerNav>
+    </Main>
   );
 };
+
+const Main = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 
 const ContainerNav = styled.div`
   position: absolute;
