@@ -8,7 +8,7 @@ const Blog = () => {
         {" "}
         <iframe
           id="blogIframe"
-          src="https://lmdouglasauthor.blogspot.com/2024/04/welcome-to-gharantia.html"
+          src="https://lmdouglasauthor.blogspot.com/"
           width="100%"
           height="100%"
         ></iframe>
