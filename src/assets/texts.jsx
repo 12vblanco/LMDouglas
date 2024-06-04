@@ -5,7 +5,7 @@ const texts = [
   },
   {
     synopsis:
-      "The lifeblood of Gharantia's strength, the Red Stone, is in peril. \n Criterious Handelan, Gharantia’s steadfast Guardian, has a solemn charge: to mould the country’s soldiers and to protect the realm. Yet, his unshakeable abilities start to unravel when his wife, Princess Melane, unexpectedly experiences seer dreams — a gift not meant for her, thus endangering the very magic that binds them.  \n\nAs the new year continues, the arrival of enigmatic magic wielders into their city adds to Criterious’s burden. Are the newcomers friends or foes? \n\n Gharantia’s Guardian is tested like never before as he learns the secrets of the gods, their war and the truth about his own marriage. \n\n In this epic fantasy adventure, alliances will be forged and loyalties will waver as destinies collide. Nothing is as it seems and the gods have a lot to answer for.",
+      "The devastating gods’ war that ravaged the other side of the world for centuries is coming to Gharantia. Its rulers, Princess Melane and Criterious, the Guardian, stand as sentinels, safeguarding their cherished realm. \n\nAs the Queen’s protective mist—the Bleak—rolls away after another winter, prophetic dreams haunt Melane and mysterious strangers converge on their city. \n\nCriterious must unravel the truth behind the war before it destroys them all. Who will stand with Gharantia against the coming tide? \n\nIn this epic fantasy adventure alliances will be forged, loyalties will waver, and destinies collide.",
   },
 ];
 export default texts;
