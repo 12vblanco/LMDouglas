@@ -7,8 +7,9 @@ const HeroText = () => {
       <TextContainer>
         <Title>
           {" "}
-          <Span>New Book!</Span>
-          Gharantia's Fury
+          <Span>New Book! </Span>
+          Gharantia's Fury{" "}
+          <Subtitle>(release on the 13th of September.)</Subtitle>
         </Title>
         <Subtitle>Chronicles of the Endless War Book 2</Subtitle>
         <Description>{texts2[1].synopsis}</Description>
