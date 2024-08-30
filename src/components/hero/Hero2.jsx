@@ -18,7 +18,7 @@ const Hero2 = () => {
             <HeroBook2 />
             <ButtonDiv>
               <Button
-                href="https://amzn.eu/d/e1vbvs4"
+                href="https://search.app/8P4MX1cekPSdYyS86"
                 target="_blank"
                 rel="noopener noreferrer"
               >

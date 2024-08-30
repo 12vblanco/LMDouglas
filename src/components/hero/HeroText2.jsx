@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import texts2 from "../../assets/texts";
+import texts from "../../assets/texts";
 
 const HeroText = () => {
   return (
@@ -12,7 +12,7 @@ const HeroText = () => {
           <Subtitle>(release on the 13th of September.)</Subtitle>
         </Title>
         <Subtitle>Chronicles of the Endless War Book 2</Subtitle>
-        <Description>{texts2[1].synopsis}</Description>
+        <Description>{texts[1].synopsis2}</Description>
         <br />
         {/* <a
           href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
