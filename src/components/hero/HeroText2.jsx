@@ -43,6 +43,7 @@ const TextContainer = styled.div`
   color: white;
   width: 54%;
   max-width: 640px;
+  padding-left: 3rem;
   @media (max-width: 960px) {
     width: 98%;
     margin-left: 1.5rem;
@@ -54,6 +55,7 @@ const TextContainer = styled.div`
     position: relative;
     left: 50%;
     transform: translate(-50%);
+    padding-left: 0;
   }
 `;
 

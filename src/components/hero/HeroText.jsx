@@ -6,7 +6,7 @@ const HeroText = () => {
     <>
       <TextContainer>
         <Title>LM Douglas - ‘Gharantia's Guardian’</Title>
-        {/* <Subtitle>By L.M. Douglas</Subtitle> */}
+        <Subtitle>Chronicles of the Endless War Book 1</Subtitle>
         <Description>{texts[1].synopsis}</Description>
         <br />
         {/* <a
@@ -74,6 +74,8 @@ const Title = styled.h1`
 
 const Subtitle = styled.h2`
   margin: 0 0 0.625rem;
+  color: var(--gold);
+  font-size: 22px;
 `;
 
 export default HeroText;

@@ -103,7 +103,7 @@ const Content = styled.div`
   position: relative;
   z-index: 1;
   @media (max-width: 800px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: center;
     max-width: 100%;
   }
