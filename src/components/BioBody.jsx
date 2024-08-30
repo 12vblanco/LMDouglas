@@ -22,7 +22,7 @@ const BioBody = () => {
 
 const BioDiv = styled.div`
   width: 100%;
-  margin-top: 7.125rem;
+  margin-top: 1.125rem;
   height: calc(100vh);
   min-height: fit-content;
   display: flex;

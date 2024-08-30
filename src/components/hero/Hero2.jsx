@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import forest from "../../assets/imgs/forest.jpg";
-import forestf from "../../assets/imgs/forest.webp";
-import HeroBook from "./HeroBook";
-import HeroText from "./HeroText";
+import volcano from "../../assets/volcano.jpg";
+// import forestf from "../../assets/imgs/forest.webp";
+import HeroBook2 from "./HeroBook2";
+import HeroText2 from "./HeroText2";
 
-const Hero = () => {
+const Hero2 = () => {
   return (
     <>
       <Tag id="home" />
@@ -13,11 +13,12 @@ const Hero = () => {
         <BackgroundImage />
         <Overlay />
         <Content>
+          <HeroText2 />
           <Column>
-            <HeroBook />
+            <HeroBook2 />
             <ButtonDiv>
               <Button
-                href="https://www.amazon.com/Gharantias-Guardian-Chronicles-Endless-Book-ebook/dp/B0CJS2X6Y7/ref=sr_1_fkmr0_1?crid=1LD2L32C2D9IE&dib=eyJ2IjoiMSJ9.asNBvroDkMm9-t45aYt8hFGP3ceeZo8lXsNFBYeQUso.r24D70wd3B7JFx80EtUmdUrWLwHqnTZIPAt89nXlHwE&dib_tag=se&keywords=l.m.+douglas+garathia&qid=1715626107&s=digital-text&sprefix=l.m.+douglas+garathia%2Cdigital-text%2C233&sr=1-1-fkmr0"
+                href="https://amzn.eu/d/e1vbvs4"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -26,7 +27,7 @@ const Hero = () => {
                 AMAZON.COM
               </Button>
               <Button
-                href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
+                href="https://amzn.eu/d/e1vbvs4"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -37,7 +38,6 @@ const Hero = () => {
             </ButtonDiv>
           </Column>
           {/* </a> */}
-          <HeroText />
         </Content>
       </HeroSection>
     </>
@@ -50,10 +50,10 @@ const HeroSection = styled.div`
   position: relative;
   height: calc(100vh - 122px);
   height: fit-content;
-  margin-top: 0.03rem;
+  margin-top: 6.125rem;
   padding: 1.6rem 0;
   max-width: 100vw;
-  margin-bottom: 0.03rem;
+
   @media (max-width: 800px) {
     height: fit-content;
     padding: 1.375rem 0.75rem;
@@ -67,11 +67,8 @@ const BackgroundImage = styled.div`
   width: 100%;
   max-width: 100vw;
   height: 100%;
-  background-image: url(${forest});
-  background-image: image-set(
-    url(${forestf}) type("image/webp"),
-    url(${forest}) type("image/png")
-  );
+  background-image: url(${volcano});
+  background-image: image-set(url(${volcano}) type("image/jpg"));
   background-size: cover;
   background-position: center;
   z-index: -1;
@@ -85,7 +82,7 @@ const Overlay = styled.div`
   max-width: 100vw;
   height: 100%;
   background: var(--dark);
-  opacity: 0.45;
+  opacity: 0.75;
   z-index: 0;
   @media (max-width: 600px) {
     width: 100vw;
@@ -149,4 +146,4 @@ const Button = styled.a`
   }
 `;
 
-export default Hero;
+export default Hero2;

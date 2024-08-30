@@ -47,7 +47,7 @@ const BookImg = styled.img`
   position: relative;
   z-index: 1;
   height: auto;
-  min-width: 320px;
+  min-width: 280px;
   margin: 0.5rem;
 `;
 

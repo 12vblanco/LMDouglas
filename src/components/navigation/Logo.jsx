@@ -17,7 +17,7 @@ const Div = styled.div`
   align-items: center;
 `;
 const LogoImg = styled.img`
-  max-width: 90px;
+  max-width: 80px;
   margin: 0 0.75rem;
   @media (max-width: 400px) {
     max-width: 70px;
