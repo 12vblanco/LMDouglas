@@ -22,7 +22,7 @@ const Hero2 = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                BUY HERE
+                Pre-ORDER
                 <br />
                 AMAZON.COM
               </Button>
@@ -31,7 +31,7 @@ const Hero2 = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                BUY HERE
+                Pre-ORDER
                 <br />
                 AMAZON.UK
               </Button>
