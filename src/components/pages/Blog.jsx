@@ -20,7 +20,7 @@ const Blog = () => {
 const BlogDiv = styled.div`
   width: 100vw;
   height: 100vh;
-  margin-top: 1.125rem;
+  margin-top: 6.125rem;
   background: var(--dark);
 `;
 
