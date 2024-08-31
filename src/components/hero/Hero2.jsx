@@ -6,6 +6,7 @@ import HeroText2 from "./HeroText2";
 
 const Hero2 = () => {
   const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 850);
+
   useEffect(() => {
     const handleResize = () => {
       setIsWideScreen(window.innerWidth > 850);

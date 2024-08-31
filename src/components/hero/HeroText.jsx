@@ -10,7 +10,7 @@ const HeroText = (isWideScreen) => {
 
         <Subtitle>Chronicles of the Endless War Book 1</Subtitle>
 
-        {isWideScreen && <BookBlock />}
+        {!isWideScreen && <BookBlock />}
 
         <Description>{texts[1].synopsis2}</Description>
         <br />

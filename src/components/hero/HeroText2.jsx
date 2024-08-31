@@ -2,7 +2,7 @@ import styled from "styled-components";
 import texts from "../../assets/texts";
 import BookBlock2 from "./BookBlock2";
 
-const HeroText = (isWideScreen) => {
+const HeroText = ({ isWideScreen }) => {
   return (
     <>
       <TextContainer>
@@ -12,13 +12,10 @@ const HeroText = (isWideScreen) => {
           Gharantia's Fury{" "}
         </Title>
         <Subtitle>Chronicles of the Endless War Book 2</Subtitle>
-
         <Subtitle style={{ fontSize: "18px" }}>
           (release on the 13th of September.)
         </Subtitle>
-
-        {isWideScreen && <BookBlock2 />}
-
+        {!isWideScreen && <BookBlock2 />}
         <Description>{texts[1].synopsis2}</Description>
         <br />
       </TextContainer>
@@ -34,9 +31,9 @@ const Description = styled.p`
     font-size: 1.1rem;
     padding-right: 0;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     max-width: 100vw;
-    margin: 2rem 0 1rem 0;
+    margin: 2rem 0 0rem 0;
   }
 `;
 
@@ -49,7 +46,7 @@ const TextContainer = styled.div`
     width: 98%;
     margin-left: 1.5rem;
   }
-  @media (max-width: 800px) {
+  @media (max-width: 850px) {
     width: 100%;
     max-width: 100vw;
     margin: 0;

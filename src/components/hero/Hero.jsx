@@ -22,8 +22,8 @@ const Hero = () => {
         <BackgroundImage />
         <Overlay />
         <Content>
-          <HeroText isWideScreen={isWideScreen} />
           {isWideScreen && <BookBlock />}
+          <HeroText isWideScreen={isWideScreen} />
         </Content>
       </HeroSection>
     </>
