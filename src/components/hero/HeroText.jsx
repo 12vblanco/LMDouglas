@@ -1,12 +1,28 @@
 import styled from "styled-components";
 import texts from "../../assets/texts";
+import BookBlock from "./BookBlock";
 
-const HeroText = () => {
+const HeroText = (isWideScreen) => {
   return (
     <>
       <TextContainer>
         <Title>Gharantia's Guardian</Title>
+
         <Subtitle>Chronicles of the Endless War Book 1</Subtitle>
+
+        {isWideScreen && <BookBlock />}
+
+        <Description>{texts[1].synopsis2}</Description>
+        <br />
+      </TextContainer>
+    </>
+  );
+};
+
+() => {
+  return (
+    <>
+      <TextContainer>
         <Description>{texts[1].synopsis}</Description>
         <br />
       </TextContainer>
@@ -24,7 +40,7 @@ const Description = styled.p`
   }
   @media (max-width: 800px) {
     max-width: 100vw;
-    margin: 0 0 1rem 0;
+    margin: 2rem 0 1rem 0;
   }
 `;
 
@@ -70,8 +86,11 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   margin: 0 0 0.625rem;
   color: var(--gold);
-  letter-spacing: -0.6px;
   font-size: 22px;
+  letter-spacing: -0.6px;
+  @media (max-width: 850px) {
+    margin-top: -0.5rem;
+    margin-bottom: 0rem;
+  }
 `;
-
 export default HeroText;

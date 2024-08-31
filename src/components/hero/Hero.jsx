@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import forest from "../../assets/imgs/forest.jpg";
 import forestf from "../../assets/imgs/forest.webp";
-import HeroBook from "./HeroBook";
+import BookBlock from "./BookBlock";
 import HeroText from "./HeroText";
 
 const Hero = () => {
+  const [isWideScreen, setIsWideScreen] = useState(window.innerWidth > 850);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsWideScreen(window.innerWidth > 850);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       <Tag id="home" />
@@ -13,31 +22,8 @@ const Hero = () => {
         <BackgroundImage />
         <Overlay />
         <Content>
-          <Column>
-            <HeroBook />
-            <ButtonDiv>
-              <Button
-                href="https://www.amazon.com/Gharantias-Guardian-Chronicles-Endless-Book-ebook/dp/B0CJS2X6Y7/ref=sr_1_fkmr0_1?crid=1LD2L32C2D9IE&dib=eyJ2IjoiMSJ9.asNBvroDkMm9-t45aYt8hFGP3ceeZo8lXsNFBYeQUso.r24D70wd3B7JFx80EtUmdUrWLwHqnTZIPAt89nXlHwE&dib_tag=se&keywords=l.m.+douglas+garathia&qid=1715626107&s=digital-text&sprefix=l.m.+douglas+garathia%2Cdigital-text%2C233&sr=1-1-fkmr0"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                BUY HERE
-                <br />
-                AMAZON.COM
-              </Button>
-              <Button
-                href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                BUY HERE
-                <br />
-                AMAZON.UK
-              </Button>
-            </ButtonDiv>
-          </Column>
-          {/* </a> */}
-          <HeroText />
+          <HeroText isWideScreen={isWideScreen} />
+          {isWideScreen && <BookBlock />}
         </Content>
       </HeroSection>
     </>

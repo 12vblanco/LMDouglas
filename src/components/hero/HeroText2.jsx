@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import texts from "../../assets/texts";
+import BookBlock2 from "./BookBlock2";
 
-const HeroText = () => {
+const HeroText = (isWideScreen) => {
   return (
     <>
       <TextContainer>
@@ -9,18 +10,17 @@ const HeroText = () => {
           {" "}
           <Span>New Book! </Span>
           Gharantia's Fury{" "}
-          <Subtitle>(release on the 13th of September.)</Subtitle>
         </Title>
         <Subtitle>Chronicles of the Endless War Book 2</Subtitle>
+
+        <Subtitle style={{ fontSize: "18px" }}>
+          (release on the 13th of September.)
+        </Subtitle>
+
+        {isWideScreen && <BookBlock2 />}
+
         <Description>{texts[1].synopsis2}</Description>
         <br />
-        {/* <a
-          href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
-          target="_blank"
-          style={{ color: "white", fontWeight: "700" }}
-        >
-          Find the book here!
-        </a> */}
       </TextContainer>
     </>
   );
@@ -36,7 +36,7 @@ const Description = styled.p`
   }
   @media (max-width: 800px) {
     max-width: 100vw;
-    margin: 0 0 1rem 0;
+    margin: 2rem 0 1rem 0;
   }
 `;
 
@@ -75,7 +75,7 @@ const Title = styled.h1`
     padding-top: 2rem;
   }
   @media (max-width: 850px) {
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
 `;
 
@@ -90,6 +90,10 @@ const Subtitle = styled.h2`
   color: var(--gold);
   font-size: 22px;
   letter-spacing: -0.6px;
+  @media (max-width: 850px) {
+    margin-top: -0.5rem;
+    margin-bottom: 0rem;
+  }
 `;
 
 export default HeroText;
