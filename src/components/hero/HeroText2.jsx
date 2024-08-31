@@ -74,7 +74,7 @@ const Title = styled.h1`
     padding-top: 2rem;
   }
   @media (max-width: 850px) {
-    padding-top: 5rem;
+    padding-top: 1rem;
   }
 `;
 
