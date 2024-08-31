@@ -75,6 +75,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   margin: 0 0 0.625rem;
   color: var(--gold);
+  letter spacing: -.2px
   font-size: 22px;
 `;
 

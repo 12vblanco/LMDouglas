@@ -88,6 +88,7 @@ const Subtitle = styled.h2`
   margin: 0 0 0.625rem;
   color: var(--gold);
   font-size: 22px;
+  letter spacing: -.2px
 `;
 
 export default HeroText;
