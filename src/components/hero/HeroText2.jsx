@@ -63,6 +63,7 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   padding-top: 1rem;
   margin: 0;
+  letter-spacing: -0.6px;
   color: var(--gold);
   @media (max-width: 1104px) {
     padding-top: 3rem;
@@ -88,7 +89,7 @@ const Subtitle = styled.h2`
   margin: 0 0 0.625rem;
   color: var(--gold);
   font-size: 22px;
-  letter spacing: -.2px
+  letter-spacing: -0.6px;
 `;
 
 export default HeroText;

@@ -5,17 +5,10 @@ const HeroText = () => {
   return (
     <>
       <TextContainer>
-        <Title>LM Douglas - ‘Gharantia's Guardian’</Title>
+        <Title>Gharantia's Guardian</Title>
         <Subtitle>Chronicles of the Endless War Book 1</Subtitle>
         <Description>{texts[1].synopsis}</Description>
         <br />
-        {/* <a
-          href="https://www.amazon.co.uk/dp/B0CJS2X6Y7/ref=kwrp_li_stb_nodl"
-          target="_blank"
-          style={{ color: "white", fontWeight: "700" }}
-        >
-          Find the book here!
-        </a> */}
       </TextContainer>
     </>
   );
@@ -58,6 +51,8 @@ const Title = styled.h1`
   margin: 0;
   color: var(--gold);
   margin-bottom: 0.4rem;
+  letter-spacing: -0.6px;
+
   @media (max-width: 1104px) {
     padding-top: 3rem;
   }
@@ -75,7 +70,7 @@ const Title = styled.h1`
 const Subtitle = styled.h2`
   margin: 0 0 0.625rem;
   color: var(--gold);
-  letter spacing: -.2px
+  letter-spacing: -0.6px;
   font-size: 22px;
 `;
 
