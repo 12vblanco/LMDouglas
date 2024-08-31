@@ -2,28 +2,14 @@ import styled from "styled-components";
 import texts from "../../assets/texts";
 import BookBlock from "./BookBlock";
 
-const HeroText = (isWideScreen) => {
+const HeroText = ({ isWideScreen }) => {
   return (
     <>
       <TextContainer>
         <Title>Gharantia's Guardian</Title>
-
         <Subtitle>Chronicles of the Endless War Book 1</Subtitle>
-
         {!isWideScreen && <BookBlock />}
-
         <Description>{texts[1].synopsis2}</Description>
-        <br />
-      </TextContainer>
-    </>
-  );
-};
-
-() => {
-  return (
-    <>
-      <TextContainer>
-        <Description>{texts[1].synopsis}</Description>
         <br />
       </TextContainer>
     </>
