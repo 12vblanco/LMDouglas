@@ -11,7 +11,7 @@ const BookBlock2 = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Pre-ORDER
+          Buy on
           <br />
           AMAZON.COM
         </Button>
@@ -20,7 +20,7 @@ const BookBlock2 = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Pre-ORDER
+          Buy on
           <br />
           AMAZON.UK
         </Button>
