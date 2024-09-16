@@ -12,9 +12,8 @@ const HeroText = ({ isWideScreen }) => {
           Gharantia's Fury{" "}
         </Title>
         <Subtitle>Chronicles of the Endless War - Book 2</Subtitle>
-        <Subtitle style={{ fontSize: "18px" }}>
-          (release on the 13th of September.)
-        </Subtitle>
+        {/* <Subtitle style={{ fontSize: "18px" }}>
+        </Subtitle> */}
         {!isWideScreen && <BookBlock2 />}
         <Description>{texts[1].synopsis2}</Description>
         <br />
