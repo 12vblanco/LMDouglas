@@ -11,7 +11,7 @@ const HeroText = ({ isWideScreen }) => {
           <Span>New Book! </Span>
           Gharantia's Fury{" "}
         </Title>
-        <Subtitle>Chronicles of the Endless War Book 2</Subtitle>
+        <Subtitle>Chronicles of the Endless War - Book 2</Subtitle>
         <Subtitle style={{ fontSize: "18px" }}>
           (release on the 13th of September.)
         </Subtitle>

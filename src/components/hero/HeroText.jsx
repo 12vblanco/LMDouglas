@@ -7,7 +7,7 @@ const HeroText = ({ isWideScreen }) => {
     <>
       <TextContainer>
         <Title>Gharantia's Guardian</Title>
-        <Subtitle>Chronicles of the Endless War Book 1</Subtitle>
+        <Subtitle>Chronicles of the Endless War - Book 1</Subtitle>
         {!isWideScreen && <BookBlock />}
         <Description>{texts[1].synopsis2}</Description>
         <br />
